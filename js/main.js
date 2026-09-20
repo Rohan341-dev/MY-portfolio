@@ -39,7 +39,7 @@
   animateFollower();
 
   // Hover effect on interactive elements
-  const hoverTargets = document.querySelectorAll('a, button, .project__card, .ailab__card, .stack__category, .achievement, .building__card, .exploring__item, .github__repo, .beyond__card, .company-card, .leadership__card, .founder-mode__node--role');
+  const hoverTargets = document.querySelectorAll('a, button, .project__card, .ailab__card, .stack__category, .achievement, .building__card, .exploring__item, .github__repo, .beyond__card, .company-card, .leadership__card, .founder-mode__node--role, .certificate-card');
   hoverTargets.forEach(el => {
     el.addEventListener('mouseenter', () => cursorFollower.classList.add('hovering'));
     el.addEventListener('mouseleave', () => cursorFollower.classList.remove('hovering'));
