@@ -630,6 +630,38 @@ input, textarea {
   gap: 64px;
 }
 
+.about__portrait-area {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about__portrait {
+  max-width: 360px;
+}
+
+.about__portrait-img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  filter: grayscale(20%) contrast(1.05);
+  transition: filter var(--transition-medium), border-color var(--transition-fast);
+}
+
+.about__portrait-img:hover {
+  filter: grayscale(0%) contrast(1.1);
+  border-color: var(--color-accent);
+}
+
+.about__portrait-caption {
+  margin-top: 12px;
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+}
+
 .about__statement {
   max-width: 700px;
 }
@@ -2479,6 +2511,15 @@ input, textarea {
     gap: 40px;
   }
 
+  .about__portrait-area {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about__portrait {
+    max-width: 280px;
+  }
+
   .leadership__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2609,6 +2650,10 @@ input, textarea {
 
   .beyond__grid {
     grid-template-columns: 1fr;
+  }
+
+  .about__portrait {
+    max-width: 240px;
   }
 
   .company__flow {
