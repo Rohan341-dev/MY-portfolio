@@ -2476,10 +2476,10 @@ input, textarea {
 
 .certificate-card__img-wrapper {
   width: 100%;
-  aspect-ratio: 16 / 10;
   overflow: hidden;
   background: var(--color-surface);
   position: relative;
+  padding: 12px;
 }
 
 .certificate-card__overlay {
@@ -2507,8 +2507,9 @@ input, textarea {
 
 .certificate-card__img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
   transition: transform 0.4s var(--ease-out);
 }
 
