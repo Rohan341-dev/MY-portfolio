@@ -39,7 +39,7 @@
   animateFollower();
 
   // Hover effect on interactive elements
-  const hoverTargets = document.querySelectorAll('a, button, .project__card, .ailab__card, .stack__category, .achievement, .building__card, .exploring__item, .github__repo');
+  const hoverTargets = document.querySelectorAll('a, button, .project__card, .ailab__card, .stack__category, .achievement, .building__card, .exploring__item, .github__repo, .beyond__card, .company-card, .leadership__card, .founder-mode__node--role');
   hoverTargets.forEach(el => {
     el.addEventListener('mouseenter', () => cursorFollower.classList.add('hovering'));
     el.addEventListener('mouseleave', () => cursorFollower.classList.remove('hovering'));
@@ -306,6 +306,28 @@
       document.body.style.animationPlayState = 'paused';
     } else {
       document.body.style.animationPlayState = 'running';
+    }
+  });
+
+  // --- Founder Mode Interaction ---
+  const founderBranches = document.querySelectorAll('.founder-mode__branch');
+  founderBranches.forEach(branch => {
+    const roleNode = branch.querySelector('.founder-mode__node--role');
+    roleNode.addEventListener('click', () => {
+      const isActive = branch.classList.contains('active');
+      // Close all branches first
+      founderBranches.forEach(b => b.classList.remove('active'));
+      // Toggle the clicked one
+      if (!isActive) {
+        branch.classList.add('active');
+      }
+    });
+  });
+
+  // Close founder mode branches when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.founder-mode__branch')) {
+      founderBranches.forEach(b => b.classList.remove('active'));
     }
   });
 
