@@ -3,47 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rohan Yadav — Rohan Codekage | Full-Stack Developer & AI Builder</title>
-  <meta name="description" content="Portfolio of Rohan Yadav, also known as Rohan Codekage — a Nepalese student programmer, full-stack developer, AI/LLM explorer, and tech entrepreneur building web applications, SaaS products, and experimental technology.">
-  <meta name="keywords" content="Rohan Yadav, Rohan Codekage, Full-Stack Developer, AI Builder, Nepal, Portfolio, SaaS, LLM, Web Development">
+  <title>Rohan Codekage — Digital Workspace</title>
+  <meta name="description" content="The personal digital workspace of Rohan Yadav — developer, builder, founder. Code, products, companies, experiments.">
   <meta name="author" content="Rohan Yadav">
-  <meta property="og:title" content="Rohan Yadav — Rohan Codekage | Full-Stack Developer & AI Builder">
-  <meta property="og:description" content="Portfolio of Rohan Yadav — a Nepalese student programmer, full-stack developer, AI/LLM explorer, and tech entrepreneur.">
+  <meta property="og:title" content="Rohan Codekage — Digital Workspace">
+  <meta property="og:description" content="Developer, builder, founder. Building software around ideas worth exploring.">
   <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0a0a0a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='monospace' fill='%232dd4a8'>RC</text></svg>">
 </head>
 <body>
-  <!-- Cursor -->
   <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Loading -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <span class="loader__mark">RC</span>
+      <div class="loader__line"></div>
+    </div>
+  </div>
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="#hero" class="nav__logo">
-        <span class="nav__logo-text">ROHAN CODEKAGE</span>
-      </a>
-      <div class="nav__links" id="navLinks">
-        <a href="#about" class="nav__link">About</a>
-        <a href="#work" class="nav__link">Work</a>
-        <a href="#companies" class="nav__link">Companies</a>
-        <a href="#stack" class="nav__link">Stack</a>
-        <a href="#journey" class="nav__link">Journey</a>
-        <a href="#achievements" class="nav__link">Achievements</a>
-        <a href="#contact" class="nav__link">Contact</a>
-        <a href="#" class="nav__resume" aria-label="Download Resume">Resume</a>
-      </div>
-      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <div class="nav__left">
+      <a href="#hero" class="nav__mark">RC</a>
+      <span class="nav__divider"></span>
+      <span class="nav__location mono">Nepal / 2026</span>
     </div>
+    <div class="nav__center" id="navLinks">
+      <a href="#about" class="nav__link" data-nav>About</a>
+      <a href="#work" class="nav__link" data-nav>Work</a>
+      <a href="#companies" class="nav__link" data-nav>Companies</a>
+      <a href="#lab" class="nav__link" data-nav>Lab</a>
+      <a href="#journey" class="nav__link" data-nav>Journey</a>
+      <a href="#notes" class="nav__link" data-nav>Notes</a>
+      <a href="#contact" class="nav__link" data-nav>Contact</a>
+    </div>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
   </nav>
 
   <!-- Mobile Menu -->
@@ -52,1145 +55,483 @@
       <a href="#about" class="mobile-menu__link">About</a>
       <a href="#work" class="mobile-menu__link">Work</a>
       <a href="#companies" class="mobile-menu__link">Companies</a>
-      <a href="#stack" class="mobile-menu__link">Stack</a>
+      <a href="#lab" class="mobile-menu__link">Lab</a>
       <a href="#journey" class="mobile-menu__link">Journey</a>
-      <a href="#achievements" class="mobile-menu__link">Achievements</a>
+      <a href="#notes" class="mobile-menu__link">Notes</a>
       <a href="#contact" class="mobile-menu__link">Contact</a>
-      <a href="#" class="mobile-menu__link mobile-menu__resume">Resume</a>
     </div>
   </div>
 
   <main>
-    <!-- Hero Section -->
+    <!-- ======================== HERO ======================== -->
     <section class="hero" id="hero">
-      <div class="hero__bg">
-        <div class="hero__grid"></div>
-      </div>
-      <div class="hero__content">
-        <div class="hero__status reveal">
-          <span class="hero__status-dot"></span>
-          <span class="mono">Currently building</span>
-        </div>
-        <h1 class="hero__title reveal">
-          I build things that<br>
-          <span class="hero__title--accent">turn ideas into reality.</span>
-        </h1>
-        <p class="hero__subtitle reveal">
-          I'm Rohan Yadav — a student programmer, full-stack developer, AI/LLM builder, and tech entrepreneur from Nepal.
-        </p>
-        <p class="hero__description reveal">
-          I build web applications, SaaS products, AI-powered tools, and experimental systems while constantly exploring what's possible with technology.
-        </p>
-        <div class="hero__tags reveal">
-          <span class="tag">FULL-STACK DEVELOPER</span>
-          <span class="tag">AI / LLM</span>
-          <span class="tag">BUILDER</span>
-          <span class="tag">ENTREPRENEUR</span>
-          <span class="tag">FOUNDER</span>
-        </div>
-        <div class="hero__identities reveal">
+      <div class="hero__split">
+        <div class="hero__left">
           <div class="hero__identity">
-            <span class="mono hero__identity-label">THE DEVELOPER</span>
-            <span class="hero__identity-text">I write the code.</span>
+            <h1 class="hero__name">ROHAN<br>CODEKAGE</h1>
+            <span class="hero__realname mono">Rohan Yadav</span>
           </div>
-          <div class="hero__identity-divider"></div>
-          <div class="hero__identity">
-            <span class="mono hero__identity-label">THE BUILDER</span>
-            <span class="hero__identity-text">I turn ideas into products.</span>
-          </div>
-          <div class="hero__identity-divider"></div>
-          <div class="hero__identity">
-            <span class="mono hero__identity-label">THE FOUNDER</span>
-            <span class="hero__identity-text">I build the teams and organizations around those products.</span>
+          <div class="hero__roles">
+            <span class="hero__role">Student Programmer</span>
+            <span class="hero__role-sep">/</span>
+            <span class="hero__role">Full-Stack Developer</span>
+            <span class="hero__role-sep">/</span>
+            <span class="hero__role">Founder</span>
+            <span class="hero__role-sep">/</span>
+            <span class="hero__role">AI / LLM Builder</span>
           </div>
         </div>
-        <div class="hero__actions reveal">
-          <a href="#work" class="btn btn--primary">Explore My Work</a>
-          <a href="#contact" class="btn btn--secondary">Let's Connect</a>
-        </div>
-        <div class="hero__terminal reveal">
-          <div class="terminal">
-            <div class="terminal__header">
-              <span class="terminal__dot terminal__dot--red"></span>
-              <span class="terminal__dot terminal__dot--yellow"></span>
-              <span class="terminal__dot terminal__dot--green"></span>
-              <span class="terminal__title">rohan-codekage ~ zsh</span>
-            </div>
-            <div class="terminal__body">
-              <div class="terminal__line">
-                <span class="terminal__prompt">$</span>
-                <span class="terminal__command" id="typewriter"></span>
-                <span class="terminal__cursor">|</span>
-              </div>
-              <div class="terminal__output" id="terminalOutput"></div>
-            </div>
+        <div class="hero__right">
+          <p class="hero__statement serif">I build software, products, and companies around ideas worth exploring.</p>
+          <div class="hero__meta">
+            <span class="mono">Based in Nepal</span>
+            <span class="mono">Currently building</span>
+            <span class="mono">2026</span>
           </div>
         </div>
       </div>
-      <div class="hero__scroll">
-        <span class="mono">Scroll</span>
+      <div class="hero__bottom">
+        <span class="mono hero__scroll-text">Scroll to explore</span>
         <div class="hero__scroll-line"></div>
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ======================== ABOUT ======================== -->
     <section class="about" id="about">
       <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">01 / About</span>
-          <h2 class="section__title serif">A little about me.</h2>
-        </div>
-        <div class="about__grid">
-          <div class="about__portrait-area">
-            <div class="about__portrait reveal">
-              <img src="assets/rohan-profile.jpg" alt="Rohan Yadav — Rohan Codekage, sitting at his development workspace" class="about__portrait-img" loading="lazy">
-              <div class="about__portrait-caption mono">Rohan Yadav — at work</div>
-            </div>
-            <div class="about__statement">
-              <blockquote class="about__quote serif">
-                "I started with curiosity.<br>Now I build with purpose."
-              </blockquote>
+        <div class="section-num mono">01</div>
+        <div class="about__layout">
+          <div class="about__left">
+            <h2 class="about__title serif">Who is<br>Rohan?</h2>
+            <div class="about__portrait">
+              <img src="assets/rohan-profile.jpg" alt="Rohan Yadav" class="about__img" loading="lazy">
+              <div class="about__img-annotations">
+                <span class="mono">ROHAN YADAV</span>
+                <span class="mono">ROHAN CODEKAGE</span>
+                <span class="mono">Developer</span>
+                <span class="mono">Founder</span>
+                <span class="mono">Student</span>
+                <span class="mono">Builder</span>
+                <span class="mono">NEPAL / 2026</span>
+              </div>
             </div>
           </div>
-          <div class="about__story">
-            <div class="about__paragraph reveal">
+          <div class="about__right">
+            <blockquote class="about__big-quote serif">"I started with curiosity.<br>Then I started building."</blockquote>
+            <div class="about__story">
               <p>I didn't start with a plan. I started with a browser, a broken HTML page, and the question: <em>"How does this actually work?"</em></p>
-            </div>
-            <div class="about__paragraph reveal">
-              <p>That question led me down a path I never fully mapped out — from writing my first lines of HTML and CSS, to building full-stack applications, exploring AI and large language models, launching SaaS products, and experimenting with systems that solve real problems.</p>
-            </div>
-            <div class="about__paragraph reveal">
+              <p>That question led me down a path I never fully mapped out — from writing my first lines of HTML and CSS to building full-stack applications, exploring AI and large language models, launching SaaS products, and experimenting with systems that solve real problems.</p>
               <p>I'm Rohan Yadav, publicly known as <strong>Rohan Codekage</strong>. I'm a student programmer and full-stack developer based in Nepal. I'm still young, still learning, and still very much at the beginning — but I've already built things I'm genuinely proud of.</p>
-            </div>
-            <div class="about__paragraph reveal">
-              <p>My journey has taken me from basic frontend work into backend systems, databases, APIs, full-stack development, SaaS architecture, AI/LLM experimentation, automation, and product development. I've built management systems, e-commerce platforms, AI tools, and experimental hardware projects.</p>
-            </div>
-            <div class="about__paragraph reveal">
-              <p>My philosophy is simple:</p>
-            </div>
-            <div class="about__philosophy reveal">
-              <blockquote class="about__philosophy-quote serif">
-                "Don't just learn technology. Build something with it."
-              </blockquote>
-            </div>
-            <div class="about__paragraph reveal">
+              <p>My journey has taken me from basic frontend work into backend systems, databases, APIs, full-stack development, SaaS architecture, AI/LLM experimentation, automation, and product development.</p>
+              <div class="about__margin-note mono" data-note="FIRST CODE">The first HTML page</div>
+              <p>My philosophy is simple: <em>Don't just learn technology. Build something with it.</em></p>
               <p>I enjoy the entire process — taking an idea from <strong>Idea → Research → Design → Code → Debug → Improve → Ship</strong>. Every project teaches me something new, and every failure becomes the foundation for the next attempt.</p>
-            </div>
-            <div class="about__paragraph reveal">
-              <p>My interests extend beyond traditional software development. I'm curious about AI and how language models can be integrated into real products. I experiment with computer vision, automation, SaaS architecture, EdTech, e-commerce, hardware like Arduino, and physics-inspired systems. I'm drawn to problems that sit at the intersection of technology and the real world.</p>
-            </div>
-            <div class="about__paragraph reveal">
-              <p>I don't just want to learn technology. I want to build with it. And I want to build things that matter.</p>
-            </div>
-            <div class="about__paragraph reveal">
+              <div class="about__margin-note mono" data-note="FIRST PRODUCT">The first real project</div>
+              <p>My interests extend beyond traditional software development. I'm curious about AI and how language models can be integrated into real products. I experiment with computer vision, automation, SaaS architecture, EdTech, e-commerce, hardware, and physics-inspired systems.</p>
+              <div class="about__margin-note mono" data-note="FIRST COMPANY">The first venture</div>
               <p>But somewhere along the way, I realized something. The best code in the world doesn't matter if it doesn't reach the people who need it. That realization pushed me beyond writing software — into building teams, companies, and products that solve real problems.</p>
-            </div>
-            <div class="about__paragraph reveal">
-              <p>Today, I'm the <strong>Founder of SajiloCode Pvt. Ltd.</strong> and <strong>CEO &amp; Founder of Code Nest Nepal Pvt. Ltd.</strong> — two ventures born from the same curiosity that first led me to a browser and a broken HTML page. I'm learning that building a company is its own form of engineering — one that requires not just code, but vision, leadership, and the courage to build something from nothing.</p>
+              <div class="about__margin-note mono" data-note="CURRENT EXPERIMENT">Building companies</div>
+              <p>Today, I'm the <strong>Founder of SajiloCode Pvt. Ltd.</strong> and <strong>CEO &amp; Founder of Code Nest Nepal Pvt. Ltd.</strong> — two ventures born from the same curiosity that first led me to a browser and a broken HTML page.</p>
+              <p class="about__closing serif">I'm learning that building a company is its own form of engineering — one that requires not just code, but vision, leadership, and the courage to build something from nothing.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Work / Projects Section -->
+    <!-- ======================== BUILDER MAP ======================== -->
+    <section class="builder-map">
+      <div class="container">
+        <div class="builder-map__layout">
+          <div class="builder-map__center">
+            <div class="builder-map__node builder-map__node--root">
+              <span class="mono">ROHAN</span>
+            </div>
+          </div>
+          <div class="builder-map__branches">
+            <div class="builder-map__branch" data-area="code">
+              <div class="builder-map__connector"></div>
+              <div class="builder-map__node builder-map__node--area">
+                <span class="mono">CODE</span>
+              </div>
+              <div class="builder-map__detail">
+                <p>Python, JavaScript, HTML, CSS, Django, Flask, React, Next.js, REST APIs</p>
+              </div>
+            </div>
+            <div class="builder-map__branch" data-area="product">
+              <div class="builder-map__connector"></div>
+              <div class="builder-map__node builder-map__node--area">
+                <span class="mono">PRODUCT</span>
+              </div>
+              <div class="builder-map__detail">
+                <p>SaaS, School Management, Restaurant Systems, CRM, E-commerce, EdTech</p>
+              </div>
+            </div>
+            <div class="builder-map__branch" data-area="ai">
+              <div class="builder-map__connector"></div>
+              <div class="builder-map__node builder-map__node--area">
+                <span class="mono">AI</span>
+              </div>
+              <div class="builder-map__detail">
+                <p>LLMs, AI Agents, Computer Vision, OpenCV, MediaPipe, Automation</p>
+              </div>
+            </div>
+            <div class="builder-map__branch" data-area="systems">
+              <div class="builder-map__connector"></div>
+              <div class="builder-map__node builder-map__node--area">
+                <span class="mono">SYSTEMS</span>
+              </div>
+              <div class="builder-map__detail">
+                <p>PostgreSQL, SQLite, GPS, Hardware, Arduino, Real-time Dashboards</p>
+              </div>
+            </div>
+            <div class="builder-map__branch" data-area="business">
+              <div class="builder-map__connector"></div>
+              <div class="builder-map__node builder-map__node--area">
+                <span class="mono">BUSINESS</span>
+              </div>
+              <div class="builder-map__detail">
+                <p>SajiloCode, Code Nest Nepal, Product Strategy, Operations</p>
+              </div>
+            </div>
+            <div class="builder-map__branch" data-area="people">
+              <div class="builder-map__connector"></div>
+              <div class="builder-map__node builder-map__node--area">
+                <span class="mono">PEOPLE</span>
+              </div>
+              <div class="builder-map__detail">
+                <p>Team Building, Leadership, Collaboration, Vision</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== TOOLS ======================== -->
+    <section class="tools" id="tools">
+      <div class="container">
+        <div class="section-num mono">02</div>
+        <h2 class="section-heading serif">Tools I use.</h2>
+        <p class="section-sub">Not percentages. Not rankings. An ecosystem of tools I use to build things.</p>
+        <div class="tools__grid">
+          <div class="tools__category">
+            <h3 class="tools__cat-title mono">Languages</h3>
+            <div class="tools__items">
+              <span class="tools__item">Python</span>
+              <span class="tools__item">JavaScript</span>
+              <span class="tools__item">HTML</span>
+              <span class="tools__item">CSS</span>
+            </div>
+          </div>
+          <div class="tools__category">
+            <h3 class="tools__cat-title mono">Frameworks</h3>
+            <div class="tools__items">
+              <span class="tools__item">Django</span>
+              <span class="tools__item">Flask</span>
+              <span class="tools__item">FastAPI</span>
+              <span class="tools__item">React</span>
+              <span class="tools__item">Next.js</span>
+              <span class="tools__item">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="tools__category">
+            <h3 class="tools__cat-title mono">AI</h3>
+            <div class="tools__items">
+              <span class="tools__item">LLMs</span>
+              <span class="tools__item">AI Agents</span>
+              <span class="tools__item">Computer Vision</span>
+              <span class="tools__item">OpenCV</span>
+              <span class="tools__item">MediaPipe</span>
+            </div>
+          </div>
+          <div class="tools__category">
+            <h3 class="tools__cat-title mono">Systems</h3>
+            <div class="tools__items">
+              <span class="tools__item">PostgreSQL</span>
+              <span class="tools__item">SQLite</span>
+              <span class="tools__item">REST APIs</span>
+              <span class="tools__item">SaaS</span>
+              <span class="tools__item">Automation</span>
+            </div>
+          </div>
+          <div class="tools__category">
+            <h3 class="tools__cat-title mono">Tools</h3>
+            <div class="tools__items">
+              <span class="tools__item">Git</span>
+              <span class="tools__item">GitHub</span>
+              <span class="tools__item">VS Code</span>
+              <span class="tools__item">macOS / Linux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== WORK ======================== -->
     <section class="work" id="work">
       <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">02 / Work</span>
-          <h2 class="section__title serif">Selected projects & case studies.</h2>
-        </div>
+        <div class="section-num mono">03</div>
+        <h2 class="section-heading serif">Selected work.</h2>
 
-        <!-- Project Filter -->
-        <div class="work__filter reveal">
-          <button class="work__filter-btn active" data-filter="all">All</button>
-          <button class="work__filter-btn" data-filter="product">Product</button>
-          <button class="work__filter-btn" data-filter="fullstack">Full-Stack</button>
-          <button class="work__filter-btn" data-filter="ai">AI / ML</button>
-          <button class="work__filter-btn" data-filter="system">System</button>
-        </div>
-
-        <!-- SajiloCode -->
-        <article class="project" data-category="product" id="sajilocode">
-          <div class="project__header">
-            <div class="project__meta">
+        <!-- Project 01 -->
+        <article class="project project--left">
+          <div class="project__number mono">01</div>
+          <div class="project__split">
+            <div class="project__info">
               <span class="mono project__year">2024 — Present</span>
-              <span class="tag tag--small">PRODUCT</span>
-              <span class="tag tag--small">SAAS</span>
+              <h3 class="project__name serif">Smart School<br>Route Management</h3>
+              <p class="project__tagline">School transportation tracking + safety system</p>
+              <div class="project__meta-grid">
+                <div class="project__meta-item">
+                  <span class="mono project__meta-label">Role</span>
+                  <span class="project__meta-value">Lead Developer</span>
+                </div>
+                <div class="project__meta-item">
+                  <span class="mono project__meta-label">Focus</span>
+                  <span class="project__meta-value">GPS / Computer Vision / Safety</span>
+                </div>
+              </div>
             </div>
-            <h3 class="project__name serif">SajiloCode</h3>
-            <p class="project__tagline">A technology & product initiative focused on software, education, and real-world business systems.</p>
+            <div class="project__visual">
+              <div class="project__arch">
+                <div class="project__arch-center">Dashboard</div>
+                <div class="project__arch-ring">
+                  <span class="project__arch-node">GPS</span>
+                  <span class="project__arch-node">Camera</span>
+                  <span class="project__arch-node">Routes</span>
+                  <span class="project__arch-node">Alerts</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="project__body">
-            <div class="project__split">
-              <div class="project__details">
-                <div class="project__detail">
-                  <span class="project__detail-label mono">Role</span>
-                  <span class="project__detail-value">Founder / Developer</span>
-                </div>
-                <div class="project__detail">
-                  <span class="project__detail-label mono">Focus</span>
-                  <span class="project__detail-value">SaaS · EdTech · Business Systems · E-commerce</span>
-                </div>
-                <div class="project__problem reveal">
-                  <span class="project__detail-label mono">Problem</span>
-                  <p>Schools, restaurants, and small businesses in Nepal often rely on manual processes, paper-based records, or expensive imported software that doesn't fit their specific needs. There's a gap for affordable, localized, and practical digital solutions.</p>
-                </div>
-                <div class="project__solution reveal">
-                  <span class="project__detail-label mono">Solution</span>
-                  <p>SajiloCode was created as a product lab — a space to build and ship real-world systems. Starting with a School Management System and expanding into Restaurant Management, CRM, Billing, SaaS platforms, and business automation tools. Each product is designed to solve a specific problem while learning how to think like a product builder, not just a coder.</p>
-                </div>
-              </div>
-              <div class="project__visual">
-                <div class="project__cards">
-                  <div class="project__card">
-                    <div class="project__card-icon">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
-                    </div>
-                    <span class="mono">School Management</span>
-                    <p>Student records, attendance, scheduling, results, and administration.</p>
-                  </div>
-                  <div class="project__card">
-                    <div class="project__card-icon">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <span class="mono">CRM</span>
-                    <p>Customer relationship management for business operations.</p>
-                  </div>
-                  <div class="project__card">
-                    <div class="project__card-icon">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                    </div>
-                    <span class="mono">Restaurant System</span>
-                    <p>Order management, billing, inventory, and operations.</p>
-                  </div>
-                  <div class="project__card">
-                    <div class="project__card-icon">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
-                    </div>
-                    <span class="mono">SaaS Platform</span>
-                    <p>Multi-tenant software products and business automation.</p>
-                  </div>
-                </div>
-              </div>
+          <div class="project__details">
+            <div class="project__detail-block">
+              <span class="mono project__detail-label">The Problem</span>
+              <p>School transportation systems often lack visibility. Parents don't know where the bus is. Schools can't monitor routes in real time. Safety incidents go undetected.</p>
             </div>
-            <div class="project__tech reveal">
-              <span class="mono">Stack:</span>
-              <span class="tag tag--small">Python</span>
-              <span class="tag tag--small">Django</span>
-              <span class="tag tag--small">HTML</span>
-              <span class="tag tag--small">CSS</span>
-              <span class="tag tag--small">JavaScript</span>
-              <span class="tag tag--small">SQLite</span>
-              <span class="tag tag--small">PostgreSQL</span>
-              <span class="tag tag--small">REST APIs</span>
+            <div class="project__detail-block">
+              <span class="mono project__detail-label">The Solution</span>
+              <p>A comprehensive system combining GPS tracking, route management, driver monitoring, real-time dashboards, timestamps, safety alerts, and camera-based monitoring using computer vision.</p>
             </div>
-            <div class="project__outcome reveal">
-              <span class="project__detail-label mono">What this represents</span>
-              <p>Moving from coding into product thinking and entrepreneurship. Building systems that solve real problems while learning how to create sustainable technology ventures.</p>
-            </div>
+          </div>
+          <div class="project__stack">
+            <span class="mono">Stack:</span>
+            <span class="tag">Python</span><span class="tag">Django</span><span class="tag">FastAPI</span><span class="tag">OpenCV</span><span class="tag">MediaPipe</span><span class="tag">PostgreSQL</span>
           </div>
         </article>
 
-        <!-- Shope-ease -->
-        <article class="project" data-category="product" id="shopeease">
-          <div class="project__header">
-            <div class="project__meta">
-              <span class="mono project__year">2024</span>
-              <span class="tag tag--small">E-COMMERCE</span>
-              <span class="tag tag--small">PRODUCT</span>
-            </div>
-            <h3 class="project__name serif">Shope-ease</h3>
-            <p class="project__tagline">An e-commerce platform designed for product discovery and online shopping.</p>
-          </div>
-          <div class="project__body">
-            <div class="project__split">
-              <div class="project__details">
-                <div class="project__detail">
-                  <span class="project__detail-label mono">Role</span>
-                  <span class="project__detail-value">Founder + Developer</span>
-                </div>
-                <div class="project__detail">
-                  <span class="project__detail-label mono">Focus</span>
-                  <span class="project__detail-value">E-commerce · Product Discovery · Online Shopping</span>
-                </div>
-                <div class="project__problem reveal">
-                  <span class="project__detail-label mono">Problem</span>
-                  <p>E-commerce platforms often feel generic and disconnected from local markets. Building your own gives you full control over the experience, the product catalog, and the technical architecture.</p>
-                </div>
-                <div class="project__solution reveal">
-                  <span class="project__detail-label mono">Solution</span>
-                  <p>Shope-ease was launched as an experiment in real-world digital commerce — a platform covering electronics, fashion, fitness, and other product categories. It was an opportunity to build the complete stack: product listings, search, cart, checkout, user accounts, and order management.</p>
-                </div>
-              </div>
-              <div class="project__visual">
-                <div class="project__preview">
-                  <div class="project__preview-inner">
-                    <div class="project__preview-header">
-                      <span class="mono">shope-ease.com</span>
-                    </div>
-                    <div class="project__preview-grid">
-                      <div class="project__preview-item">
-                        <div class="project__preview-img"></div>
-                        <span class="mono">Electronics</span>
-                      </div>
-                      <div class="project__preview-item">
-                        <div class="project__preview-img"></div>
-                        <span class="mono">Fashion</span>
-                      </div>
-                      <div class="project__preview-item">
-                        <div class="project__preview-img"></div>
-                        <span class="mono">Fitness</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="project__tech reveal">
-              <span class="mono">Stack:</span>
-              <span class="tag tag--small">HTML</span>
-              <span class="tag tag--small">CSS</span>
-              <span class="tag tag--small">JavaScript</span>
-              <span class="tag tag--small">Python</span>
-              <span class="tag tag--small">Django</span>
-              <span class="tag tag--small">SQLite</span>
-            </div>
-            <div class="project__outcome reveal">
-              <span class="project__detail-label mono">What this represents</span>
-              <p>An early experiment with building real-world digital commerce — from concept to a functional platform.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- AxisOne -->
-        <article class="project" data-category="product" id="axisone">
-          <div class="project__header">
-            <div class="project__meta">
+        <!-- Project 02 -->
+        <article class="project project--right">
+          <div class="project__number mono">02</div>
+          <div class="project__split project__split--reverse">
+            <div class="project__info">
               <span class="mono project__year">2024 — Present</span>
-              <span class="tag tag--small">PLATFORM</span>
-              <span class="tag tag--small">EDTECH</span>
+              <h3 class="project__name serif">SajiloCode</h3>
+              <p class="project__tagline">Technology & product initiative — software, education, business systems</p>
+              <div class="project__meta-grid">
+                <div class="project__meta-item">
+                  <span class="mono project__meta-label">Role</span>
+                  <span class="project__meta-value">Founder / Developer</span>
+                </div>
+                <div class="project__meta-item">
+                  <span class="mono project__meta-label">Focus</span>
+                  <span class="project__meta-value">SaaS / EdTech / Business Systems</span>
+                </div>
+              </div>
             </div>
-            <h3 class="project__name serif">AxisOne</h3>
-            <p class="project__tagline">A unified platform designed around students — Learn, Build, Launch.</p>
+            <div class="project__visual">
+              <div class="project__ecosystem">
+                <div class="project__eco-item">School Management</div>
+                <div class="project__eco-item">Restaurant System</div>
+                <div class="project__eco-item">CRM</div>
+                <div class="project__eco-item">Billing</div>
+                <div class="project__eco-item">SaaS</div>
+                <div class="project__eco-item">Business Automation</div>
+              </div>
+            </div>
           </div>
-          <div class="project__body">
-            <div class="project__split">
-              <div class="project__details">
-                <div class="project__detail">
-                  <span class="project__detail-label mono">Role</span>
-                  <span class="project__detail-value">Founder / Developer</span>
-                </div>
-                <div class="project__detail">
-                  <span class="project__detail-label mono">Focus</span>
-                  <span class="project__detail-value">Learning · Digital Tools · Startup Building · Student Resources</span>
-                </div>
-                <div class="project__problem reveal">
-                  <span class="project__detail-label mono">Problem</span>
-                  <p>Students often lack a centralized platform that combines learning, building, and launching — moving from education to creation to real products in one place.</p>
-                </div>
-                <div class="project__solution reveal">
-                  <span class="project__detail-label mono">Solution</span>
-                  <p>AxisOne is designed as a unified ecosystem for students. The core concept is <strong>Learn → Build → Launch</strong> — providing learning resources, digital tools, startup building frameworks, and productivity features in a single platform tailored for student ambition.</p>
-                </div>
-              </div>
-              <div class="project__visual">
-                <div class="project__futuristic">
-                  <div class="project__futuristic-ring"></div>
-                  <div class="project__futuristic-core">
-                    <span class="mono">AXIS</span>
-                    <span class="mono">ONE</span>
-                  </div>
-                  <div class="project__futuristic-label mono">Learn · Build · Launch</div>
-                </div>
-              </div>
+          <div class="project__details">
+            <div class="project__detail-block">
+              <span class="mono project__detail-label">The Problem</span>
+              <p>Schools, restaurants, and small businesses in Nepal often rely on manual processes, paper-based records, or expensive imported software that doesn't fit their specific needs.</p>
             </div>
-            <div class="project__tech reveal">
-              <span class="mono">Stack:</span>
-              <span class="tag tag--small">Next.js</span>
-              <span class="tag tag--small">React</span>
-              <span class="tag tag--small">Tailwind CSS</span>
-              <span class="tag tag--small">Python</span>
-              <span class="tag tag--small">PostgreSQL</span>
-              <span class="tag tag--small">REST APIs</span>
+            <div class="project__detail-block">
+              <span class="mono project__detail-label">The Solution</span>
+              <p>SajiloCode was created as a product lab — a space to build and ship real-world systems. Starting with a School Management System and expanding into Restaurant Management, CRM, Billing, SaaS platforms, and business automation tools.</p>
             </div>
+          </div>
+          <div class="project__stack">
+            <span class="mono">Stack:</span>
+            <span class="tag">Python</span><span class="tag">Django</span><span class="tag">JavaScript</span><span class="tag">SQLite</span><span class="tag">PostgreSQL</span><span class="tag">REST APIs</span>
           </div>
         </article>
 
-        <!-- Smart School Route Management System -->
-        <article class="project" data-category="system fullstack ai" id="smartschool">
-          <div class="project__header">
-            <div class="project__meta">
-              <span class="mono project__year">2024 — 2025</span>
-              <span class="tag tag--small">SYSTEM</span>
-              <span class="tag tag--small">COMPUTER VISION</span>
-              <span class="tag tag--small">GPS</span>
+        <!-- Project 03 -->
+        <article class="project project--left">
+          <div class="project__number mono">03</div>
+          <div class="project__split">
+            <div class="project__info">
+              <span class="mono project__year">2024 — Present</span>
+              <h3 class="project__name serif">AxisOne</h3>
+              <p class="project__tagline">Student platform — Learn, Build, Launch</p>
+              <div class="project__meta-grid">
+                <div class="project__meta-item">
+                  <span class="mono project__meta-label">Role</span>
+                  <span class="project__meta-value">Founder / Developer</span>
+                </div>
+                <div class="project__meta-item">
+                  <span class="mono project__meta-label">Focus</span>
+                  <span class="project__meta-value">Learning / Startup Building / Digital Tools</span>
+                </div>
+              </div>
             </div>
-            <h3 class="project__name serif">Smart School Route Management System</h3>
-            <p class="project__tagline">A school transportation and safety platform — GPS tracking, route management, driver monitoring, and real-time alerts.</p>
+            <div class="project__visual">
+              <div class="project__axis">
+                <div class="project__axis-ring"></div>
+                <div class="project__axis-core">
+                  <span class="mono">AXIS</span>
+                  <span class="mono">ONE</span>
+                </div>
+                <span class="mono project__axis-label">Learn · Build · Launch</span>
+              </div>
+            </div>
           </div>
-          <div class="project__body">
-            <div class="project__split">
-              <div class="project__details">
-                <div class="project__detail">
-                  <span class="project__detail-label mono">Role</span>
-                  <span class="project__detail-value">Lead Developer</span>
-                </div>
-                <div class="project__detail">
-                  <span class="project__detail-label mono">Focus</span>
-                  <span class="project__detail-value">Safety · GPS Tracking · Route Optimization · Computer Vision</span>
-                </div>
-                <div class="project__problem reveal">
-                  <span class="project__detail-label mono">Problem</span>
-                  <p>School transportation systems often lack visibility. Parents don't know where the bus is. Schools can't monitor routes in real time. Safety incidents go undetected. There's no centralized system for managing school fleet operations.</p>
-                </div>
-                <div class="project__solution reveal">
-                  <span class="project__detail-label mono">Solution</span>
-                  <p>A comprehensive system combining GPS tracking, route management, driver monitoring, real-time dashboards, timestamps, safety alerts, and camera-based monitoring using computer vision concepts. The platform provides schools and parents with real-time visibility into transportation operations.</p>
-                </div>
-              </div>
-              <div class="project__visual">
-                <div class="project__architecture">
-                  <div class="project__arch-node project__arch-node--center">
-                    <span class="mono">Dashboard</span>
-                  </div>
-                  <div class="project__arch-connections">
-                    <div class="project__arch-node">
-                      <span class="mono">GPS</span>
-                    </div>
-                    <div class="project__arch-node">
-                      <span class="mono">Camera</span>
-                    </div>
-                    <div class="project__arch-node">
-                      <span class="mono">Routes</span>
-                    </div>
-                    <div class="project__arch-node">
-                      <span class="mono">Alerts</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="project__details">
+            <div class="project__detail-block">
+              <span class="mono project__detail-label">The Problem</span>
+              <p>Students often lack a centralized platform that combines learning, building, and launching — moving from education to creation to real products in one place.</p>
             </div>
-            <div class="project__tech reveal">
-              <span class="mono">Stack:</span>
-              <span class="tag tag--small">HTML</span>
-              <span class="tag tag--small">CSS</span>
-              <span class="tag tag--small">JavaScript</span>
-              <span class="tag tag--small">Python</span>
-              <span class="tag tag--small">Django</span>
-              <span class="tag tag--small">FastAPI</span>
-              <span class="tag tag--small">SQLite</span>
-              <span class="tag tag--small">PostgreSQL</span>
-              <span class="tag tag--small">MediaPipe</span>
-              <span class="tag tag--small">OpenCV</span>
+            <div class="project__detail-block">
+              <span class="mono project__detail-label">The Solution</span>
+              <p>AxisOne is designed as a unified ecosystem for students — providing learning resources, digital tools, startup building frameworks, and productivity features in a single platform.</p>
             </div>
-            <div class="project__outcome reveal">
-              <span class="project__detail-label mono">What this represents</span>
-              <p>Building systems that solve real-world problems, not just websites. Demonstrating the ability to combine hardware concepts, computer vision, real-time data, and full-stack development into a meaningful product.</p>
-            </div>
+          </div>
+          <div class="project__stack">
+            <span class="mono">Stack:</span>
+            <span class="tag">Next.js</span><span class="tag">React</span><span class="tag">Tailwind CSS</span><span class="tag">Python</span><span class="tag">PostgreSQL</span>
           </div>
         </article>
 
-        <!-- GPS / Tracking Projects -->
-        <article class="project" data-category="system fullstack" id="gpstracking">
-          <div class="project__header">
-            <div class="project__meta">
+        <!-- Project 04 -->
+        <article class="project project--right">
+          <div class="project__number mono">04</div>
+          <div class="project__split project__split--reverse">
+            <div class="project__info">
               <span class="mono project__year">2024</span>
-              <span class="tag tag--small">EXPERIMENTAL</span>
-              <span class="tag tag--small">GPS</span>
-              <span class="tag tag--small">HARDWARE</span>
+              <h3 class="project__name serif">Shope-ease</h3>
+              <p class="project__tagline">E-commerce — product discovery & online shopping</p>
+              <div class="project__meta-grid">
+                <div class="project__meta-item">
+                  <span class="mono project__meta-label">Role</span>
+                  <span class="project__meta-value">Founder + Developer</span>
+                </div>
+                <div class="project__meta-item">
+                  <span class="mono project__meta-label">Focus</span>
+                  <span class="project__meta-value">E-commerce / Product Discovery</span>
+                </div>
+              </div>
             </div>
-            <h3 class="project__name serif">GPS & Location Tracking Systems</h3>
-            <p class="project__tagline">Engineering experiments in GPS, device communication, real-time data, and location-based systems.</p>
+            <div class="project__visual">
+              <div class="project__shop-preview">
+                <div class="project__shop-bar"><span class="mono">shope-ease.com</span></div>
+                <div class="project__shop-grid">
+                  <div class="project__shop-item"><div class="project__shop-img"></div><span class="mono">Electronics</span></div>
+                  <div class="project__shop-item"><div class="project__shop-img"></div><span class="mono">Fashion</span></div>
+                  <div class="project__shop-item"><div class="project__shop-img"></div><span class="mono">Fitness</span></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="project__body">
-            <div class="project__split">
-              <div class="project__details">
-                <div class="project__detail">
-                  <span class="project__detail-label mono">Role</span>
-                  <span class="project__detail-value">Developer / Researcher</span>
+          <div class="project__details">
+            <div class="project__detail-block">
+              <span class="mono project__detail-label">The Problem</span>
+              <p>E-commerce platforms often feel generic and disconnected from local markets. Building your own gives you full control over the experience.</p>
+            </div>
+            <div class="project__detail-block">
+              <span class="mono project__detail-label">The Solution</span>
+              <p>An experiment in real-world digital commerce — a platform covering electronics, fashion, fitness, and other product categories. Complete stack: product listings, search, cart, checkout, user accounts, and order management.</p>
+            </div>
+          </div>
+          <div class="project__stack">
+            <span class="mono">Stack:</span>
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">Django</span><span class="tag">SQLite</span>
+          </div>
+        </article>
+
+        <!-- Project 05 -->
+        <article class="project project--left">
+          <div class="project__number mono">05</div>
+          <div class="project__split">
+            <div class="project__info">
+              <span class="mono project__year">2024</span>
+              <h3 class="project__name serif">GPS & Location<br>Tracking Experiments</h3>
+              <p class="project__tagline">Hardware, GPS, device communication & dashboards</p>
+              <div class="project__meta-grid">
+                <div class="project__meta-item">
+                  <span class="mono project__meta-label">Role</span>
+                  <span class="project__meta-value">Developer / Researcher</span>
                 </div>
-                <div class="project__detail">
-                  <span class="project__detail-label mono">Focus</span>
-                  <span class="project__detail-value">GPS · Location Systems · Device Communication · Real-time Data</span>
-                </div>
-                <div class="project__solution reveal">
-                  <span class="project__detail-label mono">What was explored</span>
-                  <p>Experiments with GPS modules, location APIs, device communication, real-time dashboards, hardware integration, and location-based data processing. These projects serve as engineering experiments — understanding how physical location data flows into digital systems.</p>
-                </div>
-              </div>
-              <div class="project__visual">
-                <div class="project__gps-visual">
-                  <div class="project__gps-pulse"></div>
-                  <div class="project__gps-pulse project__gps-pulse--2"></div>
-                  <div class="project__gps-center">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  </div>
+                <div class="project__meta-item">
+                  <span class="mono project__meta-label">Focus</span>
+                  <span class="project__meta-value">GPS / Hardware / Real-time Data</span>
                 </div>
               </div>
             </div>
-            <div class="project__tech reveal">
-              <span class="mono">Stack:</span>
-              <span class="tag tag--small">Python</span>
-              <span class="tag tag--small">JavaScript</span>
-              <span class="tag tag--small">GPS APIs</span>
-              <span class="tag tag--small">Hardware</span>
-              <span class="tag tag--small">Arduino</span>
-              <span class="tag tag--small">REST APIs</span>
+            <div class="project__visual">
+              <div class="project__gps">
+                <div class="project__gps-pulse"></div>
+                <div class="project__gps-pulse project__gps-pulse--2"></div>
+                <div class="project__gps-dot"></div>
+              </div>
             </div>
+          </div>
+          <div class="project__details">
+            <div class="project__detail-block">
+              <span class="mono project__detail-label">What was explored</span>
+              <p>Experiments with GPS modules, location APIs, device communication, real-time dashboards, hardware integration, and location-based data processing. Engineering experiments — understanding how physical location data flows into digital systems.</p>
+            </div>
+          </div>
+          <div class="project__stack">
+            <span class="mono">Stack:</span>
+            <span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">GPS APIs</span><span class="tag">Arduino</span><span class="tag">REST APIs</span>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- AI Lab Section -->
-    <section class="ailab" id="ailab">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">03 / AI Lab</span>
-          <h2 class="section__title serif">Experiments, agents, models, and ideas.</h2>
-        </div>
-        <p class="ailab__subtitle">A research notebook of experiments with artificial intelligence and emerging technology.</p>
-        <div class="ailab__grid">
-          <div class="ailab__card reveal">
-            <div class="ailab__card-header">
-              <span class="ailab__card-number mono">01</span>
-              <span class="tag tag--small">LLMs</span>
-            </div>
-            <h4 class="ailab__card-title">Language Model Experiments</h4>
-            <p>Working with large language models for content generation, summarization, and developer productivity tools. Exploring prompt engineering, fine-tuning concepts, and practical LLM integration.</p>
-          </div>
-          <div class="ailab__card reveal">
-            <div class="ailab__card-header">
-              <span class="ailab__card-number mono">02</span>
-              <span class="tag tag--small">AGENTS</span>
-            </div>
-            <h4 class="ailab__card-title">AI Agent Systems</h4>
-            <p>Building autonomous and semi-autonomous AI agents that can reason, plan, and execute multi-step tasks. Experimenting with tool use, memory, and agent architectures.</p>
-          </div>
-          <div class="ailab__card reveal">
-            <div class="ailab__card-header">
-              <span class="ailab__card-number mono">03</span>
-              <span class="tag tag--small">VISION</span>
-            </div>
-            <h4 class="ailab__card-title">Computer Vision</h4>
-            <p>Exploring OpenCV and MediaPipe for real-time image processing, face detection, hand tracking, and vision-based applications. Bridging the gap between camera input and intelligent systems.</p>
-          </div>
-          <div class="ailab__card reveal">
-            <div class="ailab__card-header">
-              <span class="ailab__card-number mono">04</span>
-              <span class="tag tag--small">AUTOMATION</span>
-            </div>
-            <h4 class="ailab__card-title">AI-Powered Automation</h4>
-            <p>Creating systems that automate repetitive tasks using AI — from data processing and content workflows to intelligent form filling and decision support systems.</p>
-          </div>
-          <div class="ailab__card reveal">
-            <div class="ailab__card-header">
-              <span class="ailab__card-number mono">05</span>
-              <span class="tag tag--small">DEV TOOLS</span>
-            </div>
-            <h4 class="ailab__card-title">Developer Productivity</h4>
-            <p>Building AI-assisted coding tools, code review assistants, and development workflow enhancers. Exploring how AI can accelerate the building process itself.</p>
-          </div>
-          <div class="ailab__card reveal">
-            <div class="ailab__card-header">
-              <span class="ailab__card-number mono">06</span>
-              <span class="tag tag--small">APPLIED AI</span>
-            </div>
-            <h4 class="ailab__card-title">Applied AI Products</h4>
-            <p>Integrating AI capabilities into real products — smart search, recommendation systems, predictive features, and AI-enhanced user experiences in SaaS and web applications.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tech Stack Section -->
-    <section class="stack" id="stack">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">04 / Stack</span>
-          <h2 class="section__title serif">The technology ecosystem I work with.</h2>
-        </div>
-        <p class="stack__subtitle">Not percentages. Not rankings. An ecosystem of tools I use to build things.</p>
-        <div class="stack__grid">
-          <div class="stack__category reveal">
-            <h3 class="stack__category-title mono">Frontend</h3>
-            <div class="stack__items">
-              <div class="stack__item">
-                <span class="stack__item-name">HTML</span>
-                <span class="stack__item-tag mono"> markup</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">CSS</span>
-                <span class="stack__item-tag mono"> styling</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">JavaScript</span>
-                <span class="stack__item-tag mono"> scripting</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">React</span>
-                <span class="stack__item-tag mono"> UI library</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">Next.js</span>
-                <span class="stack__item-tag mono"> framework</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">Tailwind CSS</span>
-                <span class="stack__item-tag mono"> utility CSS</span>
-              </div>
-            </div>
-          </div>
-          <div class="stack__category reveal">
-            <h3 class="stack__category-title mono">Backend</h3>
-            <div class="stack__items">
-              <div class="stack__item">
-                <span class="stack__item-name">Python</span>
-                <span class="stack__item-tag mono"> language</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">Flask</span>
-                <span class="stack__item-tag mono"> micro-framework</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">Django</span>
-                <span class="stack__item-tag mono"> full framework</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">REST APIs</span>
-                <span class="stack__item-tag mono"> architecture</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">SQLite</span>
-                <span class="stack__item-tag mono"> embedded DB</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">PostgreSQL</span>
-                <span class="stack__item-tag mono"> relational DB</span>
-              </div>
-            </div>
-          </div>
-          <div class="stack__category reveal">
-            <h3 class="stack__category-title mono">AI / ML</h3>
-            <div class="stack__items">
-              <div class="stack__item">
-                <span class="stack__item-name">LLMs</span>
-                <span class="stack__item-tag mono"> language models</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">AI Agents</span>
-                <span class="stack__item-tag mono"> autonomous systems</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">Computer Vision</span>
-                <span class="stack__item-tag mono"> image processing</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">OpenCV</span>
-                <span class="stack__item-tag mono"> vision library</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">MediaPipe</span>
-                <span class="stack__item-tag mono"> ML solutions</span>
-              </div>
-            </div>
-          </div>
-          <div class="stack__category reveal">
-            <h3 class="stack__category-title mono">Tools</h3>
-            <div class="stack__items">
-              <div class="stack__item">
-                <span class="stack__item-name">Git</span>
-                <span class="stack__item-tag mono"> version control</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">GitHub</span>
-                <span class="stack__item-tag mono"> repository</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">VS Code</span>
-                <span class="stack__item-tag mono"> editor</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">macOS / Linux</span>
-                <span class="stack__item-tag mono"> environment</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">APIs</span>
-                <span class="stack__item-tag mono"> integration</span>
-              </div>
-            </div>
-          </div>
-          <div class="stack__category reveal">
-            <h3 class="stack__category-title mono">Product / Systems</h3>
-            <div class="stack__items">
-              <div class="stack__item">
-                <span class="stack__item-name">SaaS</span>
-                <span class="stack__item-tag mono"> software as a service</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">Automation</span>
-                <span class="stack__item-tag mono"> workflow</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">Dashboards</span>
-                <span class="stack__item-tag mono"> data viz</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">Management Systems</span>
-                <span class="stack__item-tag mono"> operations</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">E-commerce</span>
-                <span class="stack__item-tag mono"> commerce</span>
-              </div>
-              <div class="stack__item">
-                <span class="stack__item-name">EdTech</span>
-                <span class="stack__item-tag mono"> education</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Journey Timeline -->
-    <section class="journey" id="journey">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">05 / Journey</span>
-          <h2 class="section__title serif">The path so far.</h2>
-        </div>
-        <div class="timeline">
-          <div class="timeline__line"></div>
-
-          <div class="timeline__item reveal">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="mono timeline__phase">Beginning</span>
-              <h4 class="timeline__title serif">Early Coding</h4>
-              <p>Started exploring programming and computers at a young age. First encounters with HTML, CSS, and the web. The curiosity that started everything.</p>
-            </div>
-          </div>
-
-          <div class="timeline__item reveal">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="mono timeline__phase">Foundation</span>
-              <h4 class="timeline__title serif">Frontend Development</h4>
-              <p>HTML → CSS → JavaScript. Learning the building blocks of the web. Creating first pages, experimenting with layouts, understanding how browsers render the world.</p>
-            </div>
-          </div>
-
-          <div class="timeline__item reveal">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="mono timeline__phase">Growth</span>
-              <h4 class="timeline__title serif">Full-Stack Development</h4>
-              <p>Backend → APIs → Databases → Frameworks. Moving beyond the frontend into complete systems. Learning Python, Django, databases, and how to build real applications.</p>
-            </div>
-          </div>
-
-          <div class="timeline__item reveal">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="mono timeline__phase">Products</span>
-              <h4 class="timeline__title serif">Product Development</h4>
-              <p>SaaS → Management Systems → E-commerce → EdTech. Shifting from writing code to building products. Learning how to think about users, problems, and solutions.</p>
-            </div>
-          </div>
-
-          <div class="timeline__item reveal">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="mono timeline__phase">Exploration</span>
-              <h4 class="timeline__title serif">AI Exploration</h4>
-              <p>LLMs → AI Agents → Computer Vision → Automation. Diving into the frontier. Experimenting with language models, building agent systems, exploring how AI can be practically applied.</p>
-            </div>
-          </div>
-
-          <div class="timeline__item reveal">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="mono timeline__phase">Ventures</span>
-              <h4 class="timeline__title serif">Entrepreneurship</h4>
-              <p>Turning technical ideas into products and ventures. SajiloCode, Shope-ease, AxisOne — learning what it means to build not just software, but businesses.</p>
-            </div>
-          </div>
-
-          <div class="timeline__item reveal">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="mono timeline__phase">Next</span>
-              <h4 class="timeline__title serif">What's Next</h4>
-              <p>Continue learning, building, experimenting, and shipping. The journey is just beginning.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section class="achievements" id="achievements">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">06 / Achievements</span>
-          <h2 class="section__title serif">Milestones along the way.</h2>
-        </div>
-        <div class="achievements__grid">
-          <div class="achievement reveal">
-            <span class="achievement__year mono">2024</span>
-            <h4 class="achievement__title">SajiloCode — Founded</h4>
-            <p>Launched a technology initiative building management systems, SaaS products, and business automation tools.</p>
-          </div>
-          <div class="achievement reveal">
-            <span class="achievement__year mono">2024</span>
-            <h4 class="achievement__title">Shope-ease — Launched</h4>
-            <p>Built and launched an e-commerce platform covering electronics, fashion, and fitness products.</p>
-          </div>
-          <div class="achievement reveal">
-            <span class="achievement__year mono">2024</span>
-            <h4 class="achievement__title">Mathematics Competitions</h4>
-            <p>Participated in mathematics competitions and olympiad-level problem solving, building analytical thinking skills.</p>
-          </div>
-          <div class="achievement reveal">
-            <span class="achievement__year mono">2024 — 2025</span>
-            <h4 class="achievement__title">Smart School Route System</h4>
-            <p>Designed and built a comprehensive school transportation safety platform combining GPS, computer vision, and real-time monitoring.</p>
-          </div>
-          <div class="achievement reveal">
-            <span class="achievement__year mono">2025</span>
-            <h4 class="achievement__title">AI / LLM Experiments</h4>
-            <p>Started active experimentation with large language models, AI agents, and applied artificial intelligence.</p>
-          </div>
-          <div class="achievement reveal">
-            <span class="achievement__year mono">Ongoing</span>
-            <h4 class="achievement__title">Building in Public</h4>
-            <p>Sharing the journey of learning, building, and creating technology — transparently and authentically.</p>
-          </div>
-        </div>
-
-        <!-- Certificates -->
-        <div class="certificates">
-          <h3 class="certificates__title serif">Certificates & Awards</h3>
-          <div class="certificates__grid">
-            <div class="certificate-card reveal">
-              <div class="certificate-card__img-wrapper">
-                <img src="assets/certificate-leroy-ai.jpeg" alt="Leroy AI Certificate of Completion — Rohan Yadav" class="certificate-card__img" loading="lazy">
-              </div>
-              <div class="certificate-card__info">
-                <h4 class="certificate-card__name">M³ Bootcamp</h4>
-                <span class="mono certificate-card__issuer">Mathematical Institute in Nepal · 2025</span>
-              </div>
-            </div>
-            <div class="certificate-card reveal">
-              <div class="certificate-card__img-wrapper">
-                <img src="assets/certificate-m3-bootcamp.jpeg" alt="M³ Bootcamp Certificate of Appreciation — Rohan Codekage" class="certificate-card__img" loading="lazy">
-              </div>
-              <div class="certificate-card__info">
-                <h4 class="certificate-card__name">Leroy AI Course</h4>
-                <span class="mono certificate-card__issuer">Leroy AI · Specialized AI Training</span>
-              </div>
-            </div>
-            <div class="certificate-card reveal">
-              <div class="certificate-card__img-wrapper">
-                <img src="assets/certificate-completion.png" alt="Certificate of Completion — Rohan Yadav" class="certificate-card__img" loading="lazy">
-              </div>
-              <div class="certificate-card__info">
-                <h4 class="certificate-card__name">Certificate of Completion</h4>
-                <span class="mono certificate-card__issuer">Professional Development</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Philosophy Section -->
-    <section class="philosophy">
-      <div class="container">
-        <div class="philosophy__content reveal">
-          <blockquote class="philosophy__quote serif">
-            "I don't just want to learn technology.<br>I want to build with it."
-          </blockquote>
-          <p class="philosophy__text">Technology is always changing. Frameworks change. Tools change. Models change. What stays constant is the ability to learn, experiment, solve problems, and keep building.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Currently Exploring -->
-    <section class="exploring">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">07 / Now</span>
-          <h2 class="section__title serif">Currently exploring.</h2>
-        </div>
-        <div class="exploring__grid">
-          <div class="exploring__item reveal">
-            <span class="exploring__indicator"></span>
-            <span class="mono">AI / LLMs</span>
-          </div>
-          <div class="exploring__item reveal">
-            <span class="exploring__indicator"></span>
-            <span class="mono">Computer Vision</span>
-          </div>
-          <div class="exploring__item reveal">
-            <span class="exploring__indicator"></span>
-            <span class="mono">Next.js</span>
-          </div>
-          <div class="exploring__item reveal">
-            <span class="exploring__indicator"></span>
-            <span class="mono">Python</span>
-          </div>
-          <div class="exploring__item reveal">
-            <span class="exploring__indicator"></span>
-            <span class="mono">SaaS Architecture</span>
-          </div>
-          <div class="exploring__item reveal">
-            <span class="exploring__indicator"></span>
-            <span class="mono">Automation</span>
-          </div>
-          <div class="exploring__item reveal">
-            <span class="exploring__indicator"></span>
-            <span class="mono">Developer Tools</span>
-          </div>
-          <div class="exploring__item reveal">
-            <span class="exploring__indicator"></span>
-            <span class="mono">Product Design</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GitHub Activity -->
-    <section class="github" id="github">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">08 / Activity</span>
-          <h2 class="section__title serif">Development activity.</h2>
-        </div>
-        <div class="github__content">
-          <div class="github__graph reveal">
-            <div class="github__graph-placeholder">
-              <div class="github__graph-grid">
-                <!-- Static contribution-like grid -->
-              </div>
-              <p class="mono github__graph-note">Connect GitHub API for live contribution data</p>
-            </div>
-          </div>
-          <div class="github__repos reveal">
-            <h4 class="github__repos-title mono">Featured Repositories</h4>
-            <div class="github__repo">
-              <div class="github__repo-header">
-                <span class="github__repo-name">Rohan341-dev/sajilocode</span>
-                <span class="tag tag--small">Python</span>
-              </div>
-              <p class="github__repo-desc">SajiloCode — management systems and SaaS products</p>
-              <div class="github__repo-meta">
-                <span class="mono">Updated recently</span>
-              </div>
-            </div>
-            <div class="github__repo">
-              <div class="github__repo-header">
-                <span class="github__repo-name">Rohan341-dev/shope-ease</span>
-                <span class="tag tag--small">Django</span>
-              </div>
-              <p class="github__repo-desc">E-commerce platform for product discovery and online shopping</p>
-              <div class="github__repo-meta">
-                <span class="mono">Updated recently</span>
-              </div>
-            </div>
-            <div class="github__repo">
-              <div class="github__repo-header">
-                <span class="github__repo-name">Rohan341-dev/smart-school-route</span>
-                <span class="tag tag--small">Python</span>
-              </div>
-              <p class="github__repo-desc">School transportation and safety management system</p>
-              <div class="github__repo-meta">
-                <span class="mono">Updated recently</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Building in Public -->
-    <section class="building">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">09 / Public</span>
-          <h2 class="section__title serif">Building in public.</h2>
-        </div>
-        <div class="building__grid">
-          <div class="building__card reveal">
-            <span class="building__card-date mono">Recent</span>
-            <h4 class="building__card-title">AI Agent Experiments</h4>
-            <p>Running experiments with autonomous AI agents — testing tool use, memory systems, and multi-step reasoning. Each experiment teaches something new about how to build reliable AI systems.</p>
-            <div class="building__card-tags">
-              <span class="tag tag--small">AI</span>
-              <span class="tag tag--small">Agents</span>
-            </div>
-          </div>
-          <div class="building__card reveal">
-            <span class="building__card-date mono">Recent</span>
-            <h4 class="building__card-title">SajiloCode Products</h4>
-            <p>Continuously expanding the SajiloCode product lineup. Each new system teaches something about product thinking, user needs, and building for real-world use cases.</p>
-            <div class="building__card-tags">
-              <span class="tag tag--small">SaaS</span>
-              <span class="tag tag--small">Product</span>
-            </div>
-          </div>
-          <div class="building__card reveal">
-            <span class="building__card-date mono">Recent</span>
-            <h4 class="building__card-title">Computer Vision Projects</h4>
-            <p>Exploring real-time computer vision applications using OpenCV and MediaPipe. Building systems that can see, detect, and respond to the physical world.</p>
-            <div class="building__card-tags">
-              <span class="tag tag--small">Vision</span>
-              <span class="tag tag--small">OpenCV</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==============================
-         ENTREPRENEURSHIP & LEADERSHIP
-         ============================== -->
-
-    <!-- Building Beyond Code -->
-    <section class="beyond" id="beyond">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">10 / Beyond Code</span>
-          <h2 class="section__title serif">Building beyond code.</h2>
-          <p class="beyond__subtitle">From writing code to building companies, teams, and products.</p>
-        </div>
-        <div class="beyond__content">
-          <div class="beyond__statement reveal">
-            <p class="serif beyond__large">Rohan's journey gradually expanded from programming into entrepreneurship, product development, team leadership, and building technology businesses. What started as curiosity about how websites work has grown into a mission to create practical digital solutions that solve real problems.</p>
-          </div>
-          <div class="beyond__grid reveal">
-            <div class="beyond__card">
-              <span class="beyond__card-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              </span>
-              <h4 class="beyond__card-title">Web Development</h4>
-              <p>Building modern, responsive web applications and platforms.</p>
-            </div>
-            <div class="beyond__card">
-              <span class="beyond__card-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
-              </span>
-              <h4 class="beyond__card-title">Custom Software</h4>
-              <p>Tailored software solutions for schools, businesses, and organizations.</p>
-            </div>
-            <div class="beyond__card">
-              <span class="beyond__card-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </span>
-              <h4 class="beyond__card-title">SaaS</h4>
-              <p>Multi-tenant software products and subscription-based platforms.</p>
-            </div>
-            <div class="beyond__card">
-              <span class="beyond__card-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
-              </span>
-              <h4 class="beyond__card-title">School Management</h4>
-              <p>Complete systems for student records, attendance, scheduling, and administration.</p>
-            </div>
-            <div class="beyond__card">
-              <span class="beyond__card-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-              </span>
-              <h4 class="beyond__card-title">Restaurant Systems</h4>
-              <p>Order management, billing, inventory, and business operations.</p>
-            </div>
-            <div class="beyond__card">
-              <span class="beyond__card-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              </span>
-              <h4 class="beyond__card-title">Business Automation</h4>
-              <p>CRM, billing, CMS, e-commerce, and automated workflows.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Companies Section -->
+    <!-- ======================== COMPANIES ======================== -->
     <section class="companies" id="companies">
       <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">11 / Companies</span>
-          <h2 class="section__title serif">The ventures I've built.</h2>
-        </div>
+        <div class="section-num mono">04</div>
+        <h2 class="section-heading serif">Companies I'm building.</h2>
 
-        <!-- SajiloCode Pvt. Ltd. -->
-        <article class="company" id="sajilocode-company">
+        <article class="company">
           <div class="company__split">
-            <div class="company__info">
-              <div class="company__meta">
-                <span class="mono">FOUNDER</span>
-                <span class="tag tag--small">EST. 2024</span>
-              </div>
+            <div class="company__left">
+              <span class="mono company__role">Founder</span>
               <h3 class="company__name serif">SajiloCode Pvt. Ltd.</h3>
-              <p class="company__tagline">An IT and custom software development company focused on building practical digital solutions for businesses, schools, startups, and organizations.</p>
-
-              <blockquote class="company__quote serif reveal">
-                "I didn't want to only build software. I wanted to build the team and the system behind it."
-              </blockquote>
-
-              <div class="company__roles reveal">
-                <span class="tag">Founder</span>
-                <span class="tag">Product Builder</span>
-                <span class="tag">Developer</span>
-                <span class="tag">Team Leadership</span>
+              <p class="company__headline serif">Building software that solves ordinary problems.</p>
+              <div class="company__tags">
+                <span class="tag">School Management</span>
+                <span class="tag">Restaurant Systems</span>
+                <span class="tag">CRM</span>
+                <span class="tag">Billing</span>
+                <span class="tag">SaaS</span>
+                <span class="tag">Business Systems</span>
               </div>
-
-              <div class="company__flow reveal">
-                <div class="company__flow-step">
-                  <span class="mono">Idea</span>
-                </div>
-                <div class="company__flow-arrow">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-                </div>
-                <div class="company__flow-step">
-                  <span class="mono">Team</span>
-                </div>
-                <div class="company__flow-arrow">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-                </div>
-                <div class="company__flow-step">
-                  <span class="mono">Product</span>
-                </div>
-                <div class="company__flow-arrow">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-                </div>
-                <div class="company__flow-step">
-                  <span class="mono">Users</span>
-                </div>
-                <div class="company__flow-arrow">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-                </div>
-                <div class="company__flow-step">
-                  <span class="mono">Growth</span>
-                </div>
+              <div class="company__role-list">
+                <span class="mono">Founder · Developer · Product Builder · Team Leader</span>
               </div>
             </div>
-
-            <div class="company__details">
-              <div class="company__detail-section reveal">
-                <h4 class="company__detail-title mono">Why SajiloCode Started</h4>
-                <p>SajiloCode was born from a simple observation: schools, restaurants, and small businesses in Nepal often rely on manual processes, paper-based records, or expensive imported software that doesn't fit their specific needs. There was a clear gap for affordable, localized, and practical digital solutions.</p>
+            <div class="company__right">
+              <div class="company__section">
+                <h4 class="mono company__section-title">Why It Started</h4>
+                <p>Schools, restaurants, and small businesses in Nepal often rely on manual processes, paper-based records, or expensive imported software. There was a clear gap for affordable, localized, and practical digital solutions.</p>
               </div>
-              <div class="company__detail-section reveal">
-                <h4 class="company__detail-title mono">The Problem</h4>
-                <p>Many organizations in Nepal lack access to affordable, customized technology solutions. Off-the-shelf software often doesn't account for local business practices, language, or workflows. The result is inefficiency, wasted time, and missed opportunities for digital transformation.</p>
-              </div>
-              <div class="company__detail-section reveal">
-                <h4 class="company__detail-title mono">Products & Services</h4>
-                <div class="company__product-list">
+              <div class="company__section">
+                <h4 class="mono company__section-title">Products & Services</h4>
+                <div class="company__product-grid">
                   <span class="tag tag--small">Web Development</span>
                   <span class="tag tag--small">Custom Software</span>
                   <span class="tag tag--small">SaaS</span>
@@ -1202,53 +543,55 @@
                   <span class="tag tag--small">E-commerce</span>
                   <span class="tag tag--small">ERP</span>
                   <span class="tag tag--small">HRM</span>
-                  <span class="tag tag--small">Business Automation</span>
+                  <span class="tag tag--small">Automation</span>
                 </div>
               </div>
-              <div class="company__detail-section reveal">
-                <h4 class="company__detail-title mono">Rohan's Responsibilities</h4>
-                <p>As Founder, Rohan leads product development, technical architecture, team coordination, and strategic direction. He works across the full stack — from writing code to making product decisions, managing timelines, and ensuring the company builds products that genuinely solve problems.</p>
+              <div class="company__section">
+                <h4 class="mono company__section-title">The Flow</h4>
+                <div class="company__flow">
+                  <span class="mono">Idea</span>
+                  <span class="company__flow-arrow">→</span>
+                  <span class="mono">Team</span>
+                  <span class="company__flow-arrow">→</span>
+                  <span class="mono">Product</span>
+                  <span class="company__flow-arrow">→</span>
+                  <span class="mono">Users</span>
+                  <span class="company__flow-arrow">→</span>
+                  <span class="mono">Growth</span>
+                </div>
               </div>
-              <div class="company__detail-section reveal">
-                <h4 class="company__detail-title mono">Lessons from Entrepreneurship</h4>
-                <p>Building SajiloCode has taught Rohan that a company is more than its software. It's the people, systems, culture, and vision behind it. Every product decision carries weight. Every team interaction shapes the company. And every failure is a lesson that makes the next attempt stronger.</p>
-              </div>
-              <div class="company__detail-section reveal">
-                <h4 class="company__detail-title mono">Future Vision</h4>
-                <p>SajiloCode aims to become a leading technology company in Nepal — building practical, affordable, and impactful digital solutions for organizations across the country and beyond. The goal is to prove that world-class software can come from anywhere.</p>
+              <div class="company__section">
+                <h4 class="mono company__section-title">Vision</h4>
+                <p>Building a leading technology company in Nepal — practical, affordable, and impactful digital solutions. Proving that world-class software can come from anywhere.</p>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- Code Nest Nepal Pvt. Ltd. -->
-        <article class="company" id="codenest-company">
+        <article class="company">
           <div class="company__split">
-            <div class="company__info">
-              <div class="company__meta">
-                <span class="mono">CEO & FOUNDER</span>
-                <span class="tag tag--small">VENTURE</span>
-              </div>
+            <div class="company__left">
+              <span class="mono company__role">CEO & Founder</span>
               <h3 class="company__name serif">Code Nest Nepal Pvt. Ltd.</h3>
-              <p class="company__tagline">Software and SaaS development focused on helping organizations build and automate their digital operations.</p>
-
-              <blockquote class="company__quote serif reveal">
-                "Building software. Building teams. Building the next version of myself."
-              </blockquote>
-
-              <div class="company__roles reveal">
-                <span class="tag">Leadership</span>
-                <span class="tag">Product Strategy</span>
-                <span class="tag">Development</span>
-                <span class="tag">Team Building</span>
-                <span class="tag">Technology</span>
+              <p class="company__headline serif">From software projects to software systems.</p>
+              <div class="company__tags">
+                <span class="tag">SaaS</span>
+                <span class="tag">Web Development</span>
+                <span class="tag">CMS</span>
+                <span class="tag">E-commerce</span>
+                <span class="tag">CRM</span>
+                <span class="tag">School Systems</span>
+                <span class="tag">Restaurant Systems</span>
+                <span class="tag">Automation</span>
+              </div>
+              <div class="company__role-list">
+                <span class="mono">Technology + Product + Leadership + Operations + Team Building</span>
               </div>
             </div>
-
-            <div class="company__details">
-              <div class="company__detail-section reveal">
-                <h4 class="company__detail-title mono">Core Areas</h4>
-                <div class="company__product-list">
+            <div class="company__right">
+              <div class="company__section">
+                <h4 class="mono company__section-title">Core Areas</h4>
+                <div class="company__product-grid">
                   <span class="tag tag--small">SaaS Development</span>
                   <span class="tag tag--small">Business Websites</span>
                   <span class="tag tag--small">CMS</span>
@@ -1261,13 +604,13 @@
                   <span class="tag tag--small">Custom Software</span>
                 </div>
               </div>
-              <div class="company__detail-section reveal">
-                <h4 class="company__detail-title mono">Rohan's Role</h4>
-                <p>As CEO & Founder, Rohan drives the company's technology strategy, product direction, and team development. He bridges the gap between technical execution and business vision — ensuring that every product decision serves both the user and the company's long-term goals.</p>
+              <div class="company__section">
+                <h4 class="mono company__section-title">Rohan's Role</h4>
+                <p>As CEO & Founder, Rohan drives the company's technology strategy, product direction, and team development. He bridges the gap between technical execution and business vision — ensuring every product decision serves both the user and the company's long-term goals.</p>
               </div>
-              <div class="company__detail-section reveal">
-                <h4 class="company__detail-title mono">What This Represents</h4>
-                <p>Code Nest Nepal represents Rohan's expansion into full-spectrum leadership — from individual developer to someone who builds the organizations, teams, and systems that turn technology into impact. It's a continuation of the entrepreneurial journey, with higher stakes and bigger ambitions.</p>
+              <div class="company__section">
+                <h4 class="mono company__section-title">What This Represents</h4>
+                <p>Expansion into full-spectrum leadership — from individual developer to someone who builds the organizations, teams, and systems that turn technology into impact.</p>
               </div>
             </div>
           </div>
@@ -1275,182 +618,86 @@
       </div>
     </section>
 
-    <!-- Founder Journey Timeline -->
-    <section class="founder-journey" id="founder-journey">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">12 / Founder Journey</span>
-          <h2 class="section__title serif">From developer to founder.</h2>
-        </div>
-        <div class="timeline founder-timeline">
-          <div class="timeline__line"></div>
-
-          <div class="timeline__item reveal">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="mono timeline__phase">01</span>
-              <h4 class="timeline__title serif">Developer</h4>
-              <p>Started by learning how to build software. Writing HTML, CSS, JavaScript, Python. Understanding how systems work. The foundation of everything.</p>
-            </div>
-          </div>
-
-          <div class="timeline__item reveal">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="mono timeline__phase">02</span>
-              <h4 class="timeline__title serif">Builder</h4>
-              <p>Started creating real-world projects and experimenting with different technologies. Management systems, e-commerce platforms, AI experiments. Moving from tutorials to tangible products.</p>
-            </div>
-          </div>
-
-          <div class="timeline__item reveal">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="mono timeline__phase">03</span>
-              <h4 class="timeline__title serif">Product Thinker</h4>
-              <p>Started thinking about users, problems, products, and systems — not just code. Learning that the best technology serves a purpose beyond itself.</p>
-            </div>
-          </div>
-
-          <div class="timeline__item reveal">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="mono timeline__phase">04</span>
-              <h4 class="timeline__title serif">Founder</h4>
-              <p>Built SajiloCode and began developing products with a team. Stepping from individual contribution into organizational leadership. Learning to build with people, not just for them.</p>
-            </div>
-          </div>
-
-          <div class="timeline__item reveal">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="mono timeline__phase">05</span>
-              <h4 class="timeline__title serif">CEO</h4>
-              <p>Expanded into leadership, business development, product direction, team coordination, and technology strategy through Code Nest Nepal. Building the infrastructure for scale.</p>
-            </div>
-          </div>
-
-          <div class="timeline__item reveal">
-            <div class="timeline__marker"></div>
-            <div class="timeline__content">
-              <span class="mono timeline__phase">06</span>
-              <h4 class="timeline__title serif">What's Next</h4>
-              <p>Continue building companies, products, technology, and a stronger engineering mindset. The journey is far from over.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Leadership Philosophy -->
-    <section class="leadership">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">13 / Leadership</span>
-          <h2 class="section__title serif">Leadership, according to a builder.</h2>
-        </div>
-        <div class="leadership__grid">
-          <div class="leadership__card reveal">
-            <span class="leadership__card-number mono">01</span>
-            <h4 class="leadership__card-title serif">Build with people, not just for people.</h4>
-            <p>The best products aren't built in isolation. They're built through collaboration, trust, and shared purpose. Leadership means creating the environment where great work can happen.</p>
-          </div>
-          <div class="leadership__card reveal">
-            <span class="leadership__card-number mono">02</span>
-            <h4 class="leadership__card-title serif">Give ideas room to become products.</h4>
-            <p>Every idea deserves the chance to be explored. Not every idea will succeed, but the process of exploring them teaches you more than any textbook ever could.</p>
-          </div>
-          <div class="leadership__card reveal">
-            <span class="leadership__card-number mono">03</span>
-            <h4 class="leadership__card-title serif">Learn from mistakes instead of hiding them.</h4>
-            <p>Mistakes are data. They tell you what doesn't work, which brings you closer to what does. Transparency about failure builds stronger teams and better products.</p>
-          </div>
-          <div class="leadership__card reveal">
-            <span class="leadership__card-number mono">04</span>
-            <h4 class="leadership__card-title serif">A company is more than its software.</h4>
-            <p>It's the people, systems, culture, and vision behind it. Technology is the tool. The company is the vehicle. The team is the engine.</p>
-          </div>
-          <div class="leadership__card reveal">
-            <span class="leadership__card-number mono">05</span>
-            <h4 class="leadership__card-title serif">Leadership is another form of building.</h4>
-            <p>Just as code is built line by line, leadership is built decision by decision, conversation by conversation, and relationship by relationship. It's engineering applied to people and organizations.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Founder Mode -->
+    <!-- ======================== FOUNDER MODE ======================== -->
     <section class="founder-mode" id="founder-mode">
       <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">14 / Founder Mode</span>
-          <h2 class="section__title serif">The roles I take on.</h2>
+        <div class="section-num mono">05</div>
+        <h2 class="section-heading serif">The roles I take on.</h2>
+        <div class="founder-mode__switch">
+          <button class="founder-mode__btn active" data-mode="developer">DEVELOPER</button>
+          <button class="founder-mode__btn" data-mode="founder">FOUNDER</button>
+          <button class="founder-mode__btn" data-mode="explorer">EXPLORER</button>
         </div>
-        <div class="founder-mode__visual">
-          <div class="founder-mode__center">
-            <div class="founder-mode__node founder-mode__node--root">
-              <span class="mono">ROHAN</span>
+        <div class="founder-mode__panels">
+          <div class="founder-mode__panel active" data-panel="developer">
+            <div class="founder-mode__panel-grid">
+              <div class="founder-mode__panel-item">
+                <span class="mono founder-mode__panel-label">Code</span>
+                <p>Writing clean, functional code across the full stack.</p>
+              </div>
+              <div class="founder-mode__panel-item">
+                <span class="mono founder-mode__panel-label">Architecture</span>
+                <p>Designing systems that scale and solve real problems.</p>
+              </div>
+              <div class="founder-mode__panel-item">
+                <span class="mono founder-mode__panel-label">Projects</span>
+                <p>Building products, tools, and experimental systems.</p>
+              </div>
+              <div class="founder-mode__panel-item">
+                <span class="mono founder-mode__panel-label">AI</span>
+                <p>Integrating intelligent capabilities into practical products.</p>
+              </div>
+              <div class="founder-mode__panel-item">
+                <span class="mono founder-mode__panel-label">Systems</span>
+                <p>Databases, APIs, infrastructure, and deployment.</p>
+              </div>
             </div>
           </div>
-          <div class="founder-mode__branches">
-            <div class="founder-mode__branch" data-role="builder">
-              <div class="founder-mode__connector"></div>
-              <div class="founder-mode__node founder-mode__node--role">
-                <span class="mono">BUILDER</span>
+          <div class="founder-mode__panel" data-panel="founder">
+            <div class="founder-mode__panel-grid">
+              <div class="founder-mode__panel-item">
+                <span class="mono founder-mode__panel-label">Companies</span>
+                <p>Building ventures from zero to something meaningful.</p>
               </div>
-              <div class="founder-mode__details">
-                <div class="founder-mode__detail">
-                  <span class="mono">Coding</span>
-                  <p>Writing clean, functional code across the full stack.</p>
-                </div>
-                <div class="founder-mode__detail">
-                  <span class="mono">Systems</span>
-                  <p>Designing architectures that scale and solve real problems.</p>
-                </div>
-                <div class="founder-mode__detail">
-                  <span class="mono">AI</span>
-                  <p>Integrating intelligent capabilities into practical products.</p>
-                </div>
+              <div class="founder-mode__panel-item">
+                <span class="mono founder-mode__panel-label">Products</span>
+                <p>Turning ideas into products that serve real users.</p>
               </div>
-            </div>
-            <div class="founder-mode__branch" data-role="founder">
-              <div class="founder-mode__connector"></div>
-              <div class="founder-mode__node founder-mode__node--role">
-                <span class="mono">FOUNDER</span>
+              <div class="founder-mode__panel-item">
+                <span class="mono founder-mode__panel-label">Teams</span>
+                <p>Building and leading teams that ship great work.</p>
               </div>
-              <div class="founder-mode__details">
-                <div class="founder-mode__detail">
-                  <span class="mono">Products</span>
-                  <p>Turning ideas into products that serve real users.</p>
-                </div>
-                <div class="founder-mode__detail">
-                  <span class="mono">Strategy</span>
-                  <p>Making decisions that shape the company's direction.</p>
-                </div>
-                <div class="founder-mode__detail">
-                  <span class="mono">Startups</span>
-                  <p>Building ventures from zero to something meaningful.</p>
-                </div>
+              <div class="founder-mode__panel-item">
+                <span class="mono founder-mode__panel-label">Strategy</span>
+                <p>Making decisions that shape the company's direction.</p>
+              </div>
+              <div class="founder-mode__panel-item">
+                <span class="mono founder-mode__panel-label">Leadership</span>
+                <p>Making the hard decisions that move things forward.</p>
               </div>
             </div>
-            <div class="founder-mode__branch" data-role="ceo">
-              <div class="founder-mode__connector"></div>
-              <div class="founder-mode__node founder-mode__node--role">
-                <span class="mono">CEO</span>
+          </div>
+          <div class="founder-mode__panel" data-panel="explorer">
+            <div class="founder-mode__panel-grid">
+              <div class="founder-mode__panel-item">
+                <span class="mono founder-mode__panel-label">Experiments</span>
+                <p>Testing ideas, breaking things, learning from results.</p>
               </div>
-              <div class="founder-mode__details">
-                <div class="founder-mode__detail">
-                  <span class="mono">Teams</span>
-                  <p>Building and leading teams that ship great work.</p>
-                </div>
-                <div class="founder-mode__detail">
-                  <span class="mono">Vision</span>
-                  <p>Setting direction and ensuring alignment with goals.</p>
-                </div>
-                <div class="founder-mode__detail">
-                  <span class="mono">Leadership</span>
-                  <p>Making the hard decisions that move the company forward.</p>
-                </div>
+              <div class="founder-mode__panel-item">
+                <span class="mono founder-mode__panel-label">Physics</span>
+                <p>Curiosity about how the physical world works.</p>
+              </div>
+              <div class="founder-mode__panel-item">
+                <span class="mono founder-mode__panel-label">Hardware</span>
+                <p>Arduino, GPS modules, sensors, physical computing.</p>
+              </div>
+              <div class="founder-mode__panel-item">
+                <span class="mono founder-mode__panel-label">AI</span>
+                <p>Language models, agents, vision — the frontier.</p>
+              </div>
+              <div class="founder-mode__panel-item">
+                <span class="mono founder-mode__panel-label">Ideas</span>
+                <p>Connecting dots across disciplines and domains.</p>
               </div>
             </div>
           </div>
@@ -1458,175 +705,422 @@
       </div>
     </section>
 
-    <!-- From Code to Company -->
+    <!-- ======================== FROM CODE TO COMPANY ======================== -->
     <section class="codetocompany">
       <div class="container">
-        <div class="codetocompany__content reveal">
-          <blockquote class="codetocompany__quote serif">
-            <span>There was a time when I only wanted to write better code.</span>
-          </blockquote>
-          <blockquote class="codetocompany__quote serif">
-            <span>Then I started wondering what I could build with it.</span>
-          </blockquote>
-          <blockquote class="codetocompany__quote serif">
-            <span>Then I started wondering who I could build it with.</span>
-          </blockquote>
-          <blockquote class="codetocompany__quote codetocompany__quote--accent serif">
-            <span>That's when coding became entrepreneurship.</span>
-          </blockquote>
+        <div class="codetocompany__content">
+          <blockquote class="codetocompany__line serif">There was a time when I only wanted to write better code.</blockquote>
+          <blockquote class="codetocompany__line serif">Then I started wondering what I could build with it.</blockquote>
+          <blockquote class="codetocompany__line serif">Then I started wondering who I could build it with.</blockquote>
+          <blockquote class="codetocompany__line codetocompany__line--accent serif">That's when coding became entrepreneurship.</blockquote>
         </div>
       </div>
     </section>
 
-    <!-- Business + Engineering -->
-    <section class="bizeng">
+    <!-- ======================== AI LAB ======================== -->
+    <section class="lab" id="lab">
       <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">15 / Intersection</span>
-          <h2 class="section__title serif">Business + Engineering.</h2>
-        </div>
-        <div class="bizeng__grid">
-          <div class="bizeng__column reveal">
-            <h3 class="bizeng__column-title mono">Engineering</h3>
-            <ul class="bizeng__list">
-              <li>Architecture</li>
-              <li>Frontend</li>
-              <li>Backend</li>
-              <li>APIs</li>
-              <li>Databases</li>
-              <li>AI</li>
-              <li>Automation</li>
-              <li>Testing</li>
-              <li>Deployment</li>
-            </ul>
-          </div>
-          <div class="bizeng__center reveal">
-            <p class="bizeng__statement serif">Technology gives me the tools. Entrepreneurship gives those tools a purpose.</p>
-          </div>
-          <div class="bizeng__column reveal">
-            <h3 class="bizeng__column-title mono">Entrepreneurship</h3>
-            <ul class="bizeng__list">
-              <li>Product Strategy</li>
-              <li>Team Building</li>
-              <li>Leadership</li>
-              <li>Business Systems</li>
-              <li>Customer Problems</li>
-              <li>SaaS</li>
-              <li>Operations</li>
-              <li>Growth</li>
-            </ul>
-          </div>
+        <div class="section-num mono">06</div>
+        <h2 class="section-heading serif">The Lab.</h2>
+        <p class="section-sub">Experiments, agents, models, and ideas. A research notebook.</p>
+        <div class="lab__grid">
+          <article class="lab__entry">
+            <div class="lab__entry-header">
+              <span class="mono lab__entry-num">LAB / 001</span>
+              <span class="tag tag--small">LLMs</span>
+            </div>
+            <h4 class="lab__entry-title">Language Model Experiments</h4>
+            <span class="mono lab__entry-status">ACTIVE</span>
+            <p>Working with large language models for content generation, summarization, and developer productivity tools. Exploring prompt engineering, fine-tuning concepts, and practical LLM integration.</p>
+            <div class="lab__entry-stack">
+              <span class="tag tag--small">LLM</span><span class="tag tag--small">Python</span>
+            </div>
+          </article>
+          <article class="lab__entry">
+            <div class="lab__entry-header">
+              <span class="mono lab__entry-num">LAB / 002</span>
+              <span class="tag tag--small">AGENTS</span>
+            </div>
+            <h4 class="lab__entry-title">AI Agent Systems</h4>
+            <span class="mono lab__entry-status">ACTIVE</span>
+            <p>Building autonomous and semi-autonomous AI agents that can reason, plan, and execute multi-step tasks. Experimenting with tool use, memory, and agent architectures.</p>
+            <div class="lab__entry-stack">
+              <span class="tag tag--small">Agent</span><span class="tag tag--small">Python</span><span class="tag tag--small">LLM</span>
+            </div>
+          </article>
+          <article class="lab__entry">
+            <div class="lab__entry-header">
+              <span class="mono lab__entry-num">LAB / 003</span>
+              <span class="tag tag--small">VISION</span>
+            </div>
+            <h4 class="lab__entry-title">Computer Vision</h4>
+            <span class="mono lab__entry-status">ACTIVE</span>
+            <p>Exploring OpenCV and MediaPipe for real-time image processing, face detection, hand tracking, and vision-based applications.</p>
+            <div class="lab__entry-stack">
+              <span class="tag tag--small">OpenCV</span><span class="tag tag--small">MediaPipe</span><span class="tag tag--small">Python</span>
+            </div>
+          </article>
+          <article class="lab__entry">
+            <div class="lab__entry-header">
+              <span class="mono lab__entry-num">LAB / 004</span>
+              <span class="tag tag--small">AUTOMATION</span>
+            </div>
+            <h4 class="lab__entry-title">AI-Powered Automation</h4>
+            <span class="mono lab__entry-status">EXPERIMENTAL</span>
+            <p>Creating systems that automate repetitive tasks using AI — data processing, content workflows, intelligent form filling, and decision support.</p>
+            <div class="lab__entry-stack">
+              <span class="tag tag--small">AI</span><span class="tag tag--small">Python</span><span class="tag tag--small">Automation</span>
+            </div>
+          </article>
+          <article class="lab__entry">
+            <div class="lab__entry-header">
+              <span class="mono lab__entry-num">LAB / 005</span>
+              <span class="tag tag--small">DEV TOOLS</span>
+            </div>
+            <h4 class="lab__entry-title">Developer Productivity</h4>
+            <span class="mono lab__entry-status">EXPERIMENTAL</span>
+            <p>Building AI-assisted coding tools, code review assistants, and development workflow enhancers. Exploring how AI can accelerate the building process itself.</p>
+            <div class="lab__entry-stack">
+              <span class="tag tag--small">AI</span><span class="tag tag--small">DevTools</span>
+            </div>
+          </article>
+          <article class="lab__entry">
+            <div class="lab__entry-header">
+              <span class="mono lab__entry-num">LAB / 006</span>
+              <span class="tag tag--small">APPLIED AI</span>
+            </div>
+            <h4 class="lab__entry-title">Applied AI Products</h4>
+            <span class="mono lab__entry-status">ACTIVE</span>
+            <p>Integrating AI capabilities into real products — smart search, recommendation systems, predictive features, and AI-enhanced user experiences.</p>
+            <div class="lab__entry-stack">
+              <span class="tag tag--small">AI</span><span class="tag tag--small">SaaS</span><span class="tag tag--small">Python</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Company Cards -->
-    <section class="company-cards">
+    <!-- ======================== JOURNEY ======================== -->
+    <section class="journey" id="journey">
       <div class="container">
-        <div class="section__header">
-          <span class="section__label mono">16 / Ventures</span>
-          <h2 class="section__title serif">Company overview.</h2>
-        </div>
-        <div class="company-cards__grid">
-          <div class="company-card reveal">
-            <div class="company-card__header">
-              <h3 class="company-card__name serif">SajiloCode Pvt. Ltd.</h3>
-              <span class="mono">Founder</span>
+        <div class="section-num mono">07</div>
+        <h2 class="section-heading serif">The path so far.</h2>
+        <div class="timeline">
+          <div class="timeline__line"></div>
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <span class="mono timeline__phase">Beginning</span>
+              <h4 class="timeline__title serif">Early Coding</h4>
+              <p>Started exploring programming and computers at a young age. First encounters with HTML, CSS, and the web. The curiosity that started everything.</p>
             </div>
-            <p class="company-card__desc">Technology company focused on practical software and digital solutions — web development, custom software, SaaS, management systems, and business automation.</p>
-            <div class="company-card__tags">
-              <span class="tag tag--small">Web Dev</span>
-              <span class="tag tag--small">SaaS</span>
-              <span class="tag tag--small">Custom Software</span>
-              <span class="tag tag--small">ERP</span>
-              <span class="tag tag--small">CMS</span>
-            </div>
-            <a href="#sajilocode-company" class="company-card__cta btn btn--secondary">Explore SajiloCode &rarr;</a>
           </div>
-          <div class="company-card reveal">
-            <div class="company-card__header">
-              <h3 class="company-card__name serif">Code Nest Nepal Pvt. Ltd.</h3>
-              <span class="mono">CEO & Founder</span>
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <span class="mono timeline__phase">Foundation</span>
+              <h4 class="timeline__title serif">Frontend Development</h4>
+              <p>HTML → CSS → JavaScript. Learning the building blocks of the web. Creating first pages, experimenting with layouts.</p>
             </div>
-            <p class="company-card__desc">Software and SaaS development focused on helping organizations build and automate their digital operations — business systems, management platforms, and digital solutions.</p>
-            <div class="company-card__tags">
-              <span class="tag tag--small">SaaS</span>
-              <span class="tag tag--small">Business Websites</span>
-              <span class="tag tag--small">CRM</span>
-              <span class="tag tag--small">E-commerce</span>
-              <span class="tag tag--small">Automation</span>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <span class="mono timeline__phase">Growth</span>
+              <h4 class="timeline__title serif">Full-Stack Development</h4>
+              <p>Backend → APIs → Databases → Frameworks. Moving beyond the frontend into complete systems. Python, Django, databases.</p>
             </div>
-            <a href="#codenest-company" class="company-card__cta btn btn--secondary">Explore Code Nest &rarr;</a>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <span class="mono timeline__phase">Products</span>
+              <h4 class="timeline__title serif">Product Development</h4>
+              <p>SaaS → Management Systems → E-commerce → EdTech. Shifting from writing code to building products.</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <span class="mono timeline__phase">Exploration</span>
+              <h4 class="timeline__title serif">AI Exploration</h4>
+              <p>LLMs → AI Agents → Computer Vision → Automation. Diving into the frontier.</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <span class="mono timeline__phase">Ventures</span>
+              <h4 class="timeline__title serif">Entrepreneurship</h4>
+              <p>SajiloCode, Code Nest Nepal — learning what it means to build not just software, but businesses.</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <span class="mono timeline__phase">Next</span>
+              <h4 class="timeline__title serif">What's Next</h4>
+              <p>Continue learning, building, experimenting, and shipping. The journey is just beginning.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Final Brand Message -->
-    <section class="final-message">
+    <!-- ======================== BUILD LOG ======================== -->
+    <section class="buildlog" id="buildlog">
       <div class="container">
-        <div class="final-message__content reveal">
-          <blockquote class="final-message__quote serif">
-            <span>I'm still learning. I'm still experimenting. I'm still building.</span>
-          </blockquote>
-          <blockquote class="final-message__quote serif">
-            <span>But I'm no longer just learning how to code.</span>
-          </blockquote>
-          <blockquote class="final-message__quote final-message__quote--accent serif">
-            <span>I'm learning how to build.</span>
-          </blockquote>
+        <div class="section-num mono">08</div>
+        <h2 class="section-heading serif">Build log.</h2>
+        <div class="buildlog__list">
+          <article class="buildlog__entry">
+            <span class="mono buildlog__date">SEP 2026</span>
+            <div class="buildlog__content">
+              <span class="mono buildlog__label">Working on</span>
+              <p>Smart School Route Management — GPS communication, driver monitoring, real-time dashboards.</p>
+            </div>
+          </article>
+          <article class="buildlog__entry">
+            <span class="mono buildlog__date">SEP 2026</span>
+            <div class="buildlog__content">
+              <span class="mono buildlog__label">Testing</span>
+              <p>GPS communication system — device-to-server data flow, location processing.</p>
+            </div>
+          </article>
+          <article class="buildlog__entry">
+            <span class="mono buildlog__date">AUG 2026</span>
+            <div class="buildlog__content">
+              <span class="mono buildlog__label">Building</span>
+              <p>SaaS management platform — multi-tenant architecture, billing, user management.</p>
+            </div>
+          </article>
+          <article class="buildlog__entry">
+            <span class="mono buildlog__date">2025</span>
+            <div class="buildlog__content">
+              <span class="mono buildlog__label">Exploring</span>
+              <p>AI agents, LLM integration, computer vision experiments, and automation systems.</p>
+            </div>
+          </article>
+          <article class="buildlog__entry">
+            <span class="mono buildlog__date">2024</span>
+            <div class="buildlog__content">
+              <span class="mono buildlog__label">Launched</span>
+              <p>SajiloCode Pvt. Ltd. — first company. Shope-ease — e-commerce platform. AxisOne — student platform.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ======================== NOTES ======================== -->
+    <section class="notes" id="notes">
+      <div class="container">
+        <div class="section-num mono">09</div>
+        <h2 class="section-heading serif">Notes.</h2>
+        <p class="section-sub">Thinking out loud. Updates as they come.</p>
+        <div class="notes__grid">
+          <article class="notes__card">
+            <span class="mono notes__card-label">On Learning</span>
+            <h4 class="notes__card-title serif">What I'm learning right now</h4>
+            <p>The best way to learn technology is to build something with it. Tutorials end. Projects teach.</p>
+          </article>
+          <article class="notes__card">
+            <span class="mono notes__card-label">On Building</span>
+            <h4 class="notes__card-title serif">Building products as a student</h4>
+            <p>Age doesn't define capability. Curiosity and persistence do. Ship early, learn fast.</p>
+          </article>
+          <article class="notes__card">
+            <span class="mono notes__card-label">On AI</span>
+            <h4 class="notes__card-title serif">Things AI changed about coding</h4>
+            <p>AI didn't replace developers. It accelerated them. The ones who learn to use it well will build faster.</p>
+          </article>
+          <article class="notes__card">
+            <span class="mono notes__card-label">On Companies</span>
+            <h4 class="notes__card-title serif">Lessons from running a small tech company</h4>
+            <p>A company is more than software. It's people, systems, culture, and vision. Every product decision carries weight.</p>
+          </article>
+          <article class="notes__card">
+            <span class="mono notes__card-label">On Motivation</span>
+            <h4 class="notes__card-title serif">Why I build</h4>
+            <p>Because the process of turning an idea into something real is the most satisfying thing I know.</p>
+          </article>
+          <article class="notes__card">
+            <span class="mono notes__card-label">On Failure</span>
+            <h4 class="notes__card-title serif">What broke today</h4>
+            <p>Something always breaks. That's how you know you're pushing boundaries. Fix it, learn, move on.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== NOW ======================== -->
+    <section class="now" id="now">
+      <div class="container">
+        <div class="section-num mono">10</div>
+        <h2 class="section-heading serif">Now.</h2>
+        <div class="now__grid">
+          <div class="now__item">
+            <span class="mono now__label">Learning</span>
+            <p>Advanced AI agent architectures, system design patterns, product strategy</p>
+          </div>
+          <div class="now__item">
+            <span class="mono now__label">Building</span>
+            <p>Smart School Route Management system, SajiloCode products, Code Nest Nepal</p>
+          </div>
+          <div class="now__item">
+            <span class="mono now__label">Exploring</span>
+            <p>LLM integration, computer vision applications, SaaS architecture</p>
+          </div>
+          <div class="now__item">
+            <span class="mono now__label">Reading</span>
+            <p>Technical documentation, AI research papers, product development resources</p>
+          </div>
+          <div class="now__item">
+            <span class="mono now__label">Thinking about</span>
+            <p>How AI can be practically integrated into everyday products and business systems</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== MILESTONES ======================== -->
+    <section class="milestones">
+      <div class="container">
+        <div class="section-num mono">11</div>
+        <h2 class="section-heading serif">Milestones.</h2>
+        <div class="milestones__list">
+          <div class="milestone">
+            <span class="mono milestone__year">2024</span>
+            <div class="milestone__content">
+              <h4 class="milestone__title">SajiloCode — Founded</h4>
+              <p>Launched a technology initiative building management systems, SaaS products, and business automation tools.</p>
+            </div>
+          </div>
+          <div class="milestone">
+            <span class="mono milestone__year">2024</span>
+            <div class="milestone__content">
+              <h4 class="milestone__title">Shope-ease — Launched</h4>
+              <p>Built and launched an e-commerce platform covering electronics, fashion, and fitness products.</p>
+            </div>
+          </div>
+          <div class="milestone">
+            <span class="mono milestone__year">2024</span>
+            <div class="milestone__content">
+              <h4 class="milestone__title">Mathematics Competitions</h4>
+              <p>Participated in mathematics competitions and olympiad-level problem solving.</p>
+            </div>
+          </div>
+          <div class="milestone">
+            <span class="mono milestone__year">2024—25</span>
+            <div class="milestone__content">
+              <h4 class="milestone__title">Smart School Route System</h4>
+              <p>Designed and built a comprehensive school transportation safety platform.</p>
+            </div>
+          </div>
+          <div class="milestone">
+            <span class="mono milestone__year">2025</span>
+            <div class="milestone__content">
+              <h4 class="milestone__title">AI / LLM Experiments</h4>
+              <p>Started active experimentation with large language models, AI agents, and applied AI.</p>
+            </div>
+          </div>
+          <div class="milestone">
+            <span class="mono milestone__year">2025</span>
+            <div class="milestone__content">
+              <h4 class="milestone__title">M³ Bootcamp — Certificate</h4>
+              <p>Completed the Mathematical Institute in Nepal bootcamp program.</p>
+            </div>
+          </div>
+          <div class="milestone">
+            <span class="mono milestone__year">Ongoing</span>
+            <div class="milestone__content">
+              <h4 class="milestone__title">Building in Public</h4>
+              <p>Sharing the journey of learning, building, and creating technology.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="certificates">
+          <h3 class="certificates__title serif">Certificates</h3>
+          <div class="certificates__grid">
+            <div class="certificate">
+              <div class="certificate__img-wrap">
+                <img src="assets/certificate-m3-bootcamp.jpeg" alt="M³ Bootcamp Certificate" class="certificate__img" loading="lazy">
+              </div>
+              <div class="certificate__info">
+                <h4 class="certificate__name">M³ Bootcamp</h4>
+                <span class="mono certificate__issuer">Mathematical Institute in Nepal · 2025</span>
+              </div>
+            </div>
+            <div class="certificate">
+              <div class="certificate__img-wrap">
+                <img src="assets/certificate-leroy-ai.jpeg" alt="Leroy AI Certificate" class="certificate__img" loading="lazy">
+              </div>
+              <div class="certificate__info">
+                <h4 class="certificate__name">Leroy AI Course</h4>
+                <span class="mono certificate__issuer">Leroy AI · Specialized AI Training</span>
+              </div>
+            </div>
+            <div class="certificate">
+              <div class="certificate__img-wrap">
+                <img src="assets/certificate-completion.png" alt="Certificate of Completion" class="certificate__img" loading="lazy">
+              </div>
+              <div class="certificate__info">
+                <h4 class="certificate__name">Certificate of Completion</h4>
+                <span class="mono certificate__issuer">Professional Development</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== CONTACT ======================== -->
     <section class="contact" id="contact">
       <div class="container">
-        <div class="contact__content">
-          <div class="section__header">
-            <span class="section__label mono">17 / Contact</span>
-            <h2 class="section__title serif contact__title">Have an idea<br>worth building?</h2>
-            <p class="contact__subtitle">Let's turn it into something real.</p>
+        <div class="section-num mono">12</div>
+        <h2 class="contact__title serif">Let's build<br>something.</h2>
+        <p class="contact__subtitle">Have an idea? Have a problem? Want to collaborate? Let's talk.</p>
+        <div class="contact__grid">
+          <div class="contact__links">
+            <a href="mailto:rohan@example.com" class="contact__link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <div>
+                <span class="mono contact__link-label">Email</span>
+                <span class="contact__link-value">rohan@example.com</span>
+              </div>
+            </a>
+            <a href="https://github.com/Rohan341-dev" class="contact__link" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <div>
+                <span class="mono contact__link-label">GitHub</span>
+                <span class="contact__link-value">Rohan341-dev</span>
+              </div>
+            </a>
+            <a href="https://np.linkedin.com/in/rohan-codekage-746656356" class="contact__link" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <div>
+                <span class="mono contact__link-label">LinkedIn</span>
+                <span class="contact__link-value">rohan-codekage</span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/rohanl2l" class="contact__link" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <div>
+                <span class="mono contact__link-label">Instagram</span>
+                <span class="contact__link-value">@rohanl2l</span>
+              </div>
+            </a>
+            <a href="https://www.facebook.com/rohanl2l" class="contact__link" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <div>
+                <span class="mono contact__link-label">Facebook</span>
+                <span class="contact__link-value">Rohan Codekage</span>
+              </div>
+            </a>
           </div>
-          <div class="contact__grid">
-            <div class="contact__links">
-              <a href="mailto:rohan@example.com" class="contact__link contact__link--icon">
-                <svg class="contact__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                <div>
-                  <span class="mono contact__link-label">Email</span>
-                  <span class="contact__link-value">rohan@example.com</span>
-                </div>
-              </a>
-              <a href="https://github.com/Rohan341-dev" class="contact__link contact__link--icon" target="_blank" rel="noopener noreferrer">
-                <svg class="contact__icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                <div>
-                  <span class="mono contact__link-label">GitHub</span>
-                  <span class="contact__link-value">Rohan341-dev</span>
-                </div>
-              </a>
-              <a href="https://np.linkedin.com/in/rohan-codekage-746656356" class="contact__link contact__link--icon" target="_blank" rel="noopener noreferrer">
-                <svg class="contact__icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                <div>
-                  <span class="mono contact__link-label">LinkedIn</span>
-                  <span class="contact__link-value">rohan-codekage</span>
-                </div>
-              </a>
-              <a href="https://www.instagram.com/rohanl2l" class="contact__link contact__link--icon" target="_blank" rel="noopener noreferrer">
-                <svg class="contact__icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                <div>
-                  <span class="mono contact__link-label">Instagram</span>
-                  <span class="contact__link-value">@rohanl2l</span>
-                </div>
-              </a>
-              <a href="https://www.facebook.com/rohanl2l" class="contact__link contact__link--icon" target="_blank" rel="noopener noreferrer">
-                <svg class="contact__icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                <div>
-                  <span class="mono contact__link-label">Facebook</span>
-                  <span class="contact__link-value">Rohan Codekage</span>
-                </div>
-              </a>
-            </div>
-            <form class="contact__form" id="contactForm">
+          <form class="contact__form" id="contactForm">
+            <div class="contact__form-row">
               <div class="contact__form-group">
                 <label for="name" class="mono contact__form-label">Name</label>
                 <input type="text" id="name" name="name" required autocomplete="name">
@@ -1635,13 +1129,13 @@
                 <label for="email" class="mono contact__form-label">Email</label>
                 <input type="email" id="email" name="email" required autocomplete="email">
               </div>
-              <div class="contact__form-group">
-                <label for="message" class="mono contact__form-label">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn btn--primary btn--full">Send Message</button>
-            </form>
-          </div>
+            </div>
+            <div class="contact__form-group">
+              <label for="message" class="mono contact__form-label">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">Send Message</button>
+          </form>
         </div>
       </div>
     </section>
@@ -1654,25 +1148,26 @@
         <div class="footer__brand">
           <span class="footer__logo">ROHAN CODEKAGE</span>
           <span class="footer__name">Rohan Yadav</span>
-          <span class="footer__role mono">Student Programmer · Full-Stack Developer · AI Builder · Founder</span>
+          <span class="footer__role mono">Student Programmer · Developer · Founder · Builder</span>
         </div>
         <div class="footer__social">
           <a href="https://github.com/Rohan341-dev" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
           </a>
           <a href="https://np.linkedin.com/in/rohan-codekage-746656356" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </a>
           <a href="https://www.instagram.com/rohanl2l" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
           <a href="https://www.facebook.com/rohanl2l" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
         </div>
         <div class="footer__bottom">
-          <span class="mono">&copy; 2026 Rohan Yadav</span>
-          <span class="footer__tagline">Built with curiosity, code, and a lot of debugging.</span>
+          <span class="mono">NEPAL / 2026</span>
+          <span class="footer__tagline">Built with curiosity.</span>
+          <span class="mono footer__rotate">Keep building →</span>
         </div>
       </div>
     </div>
