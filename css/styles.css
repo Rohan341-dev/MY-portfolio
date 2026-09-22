@@ -631,10 +631,10 @@ input, textarea {
 }
 
 .about__portrait-area {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 48px;
-  align-items: start;
 }
 
 .about__portrait {
@@ -664,18 +664,22 @@ input, textarea {
 
 .about__statement {
   max-width: 700px;
+  text-align: center;
 }
 
 .about__quote {
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   line-height: 1.4;
   color: var(--color-offwhite);
-  border-left: 2px solid var(--color-accent);
-  padding-left: 24px;
+  border-left: none;
+  padding-left: 0;
+  text-align: center;
 }
 
 .about__story {
   max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .about__paragraph {
@@ -2617,6 +2621,7 @@ input, textarea {
   .about__portrait-area {
     grid-template-columns: 1fr;
     gap: 32px;
+    justify-items: center;
   }
 
   .about__portrait {
