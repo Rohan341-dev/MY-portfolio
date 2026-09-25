@@ -2888,3 +2888,11 @@ input, textarea {
 
   .btn { min-height: 44px; }
 }
+
+/* Legibility + form fixes for tablets and phones */
+@media (max-width: 1024px) {
+  .tag--small,
+  .hero__identity-label {
+    font-size: 0.7rem;
+  }
+}

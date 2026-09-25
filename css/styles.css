@@ -1669,3 +1669,56 @@ input, textarea { font-family: inherit; border: none; outline: none; background:
 
   .btn { min-height: 44px; }
 }
+
+/* Legibility + form fixes for tablets and phones */
+@media (max-width: 1024px) {
+  .contact__form input,
+  .contact__form textarea {
+    font-size: 16px;
+  }
+
+  .tag--small,
+  .project__year,
+  .project__meta-label,
+  .project__detail-label,
+  .project__axis-label,
+  .project__shop-item .mono,
+  .project__shop-bar .mono,
+  .lab__entry-num,
+  .lab__entry-status,
+  .notes__card-label,
+  .buildlog__date,
+  .buildlog__label,
+  .now__label,
+  .milestone__year,
+  .certificate__issuer,
+  .contact__link-label,
+  .contact__form-label,
+  .footer__role,
+  .footer__rotate,
+  .footer__bottom .mono,
+  .hero__meta .mono,
+  .hero__scroll-text,
+  .nav__location,
+  .about__margin-note,
+  .about__img-annotations .mono,
+  .company__role-list .mono {
+    font-size: 0.68rem;
+  }
+}
+
+/* Founder-mode segmented control must not overflow 320px screens */
+@media (max-width: 640px) {
+  .founder-mode__switch {
+    display: flex;
+    width: 100%;
+  }
+
+  .founder-mode__btn {
+    flex: 1;
+    padding: 12px 8px;
+    font-size: 0.64rem;
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+}
