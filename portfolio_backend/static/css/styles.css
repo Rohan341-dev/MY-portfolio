@@ -1737,6 +1737,36 @@ input, textarea {
   min-height: 100px;
 }
 
+.contact__form-status {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+}
+
+.contact__form-status[hidden] {
+  display: none;
+}
+
+.contact__form-status--success {
+  color: var(--color-accent);
+  background: var(--color-accent-dim);
+  border-color: var(--color-accent-glow);
+}
+
+.contact__form-status--error {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.08);
+  border-color: rgba(255, 107, 107, 0.25);
+}
+
+.contact__form .btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
 /* ========================================
    FOOTER
    ======================================== */

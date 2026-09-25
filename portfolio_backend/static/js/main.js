@@ -228,28 +228,52 @@
 
   // --- Contact Form ---
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    const statusEl = document.getElementById('contactStatus');
+    const btn = contactForm.querySelector('.btn');
+    const originalText = btn ? btn.textContent : '';
+
+    const setStatus = (text, type) => {
+      if (!statusEl) return;
+      statusEl.hidden = !text;
+      statusEl.textContent = text || '';
+      statusEl.classList.toggle('contact__form-status--success', type === 'success');
+      statusEl.classList.toggle('contact__form-status--error', type === 'error');
+    };
+
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      if (btn && btn.disabled) return;
 
-      const formData = new FormData(contactForm);
-      const name = formData.get('name');
-      const email = formData.get('email');
-      const message = formData.get('message');
+      setStatus('', null);
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+      }
 
-      // Simple validation
-      if (!name || !email || !message) return;
+      try {
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' },
+          credentials: 'same-origin'
+        });
+        const data = await res.json().catch(() => ({}));
 
-      // Show success feedback
-      const btn = contactForm.querySelector('.btn');
-      const originalText = btn.textContent;
-      btn.textContent = 'Message Sent!';
-      btn.style.background = '#27c93f';
-
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        contactForm.reset();
-      }, 3000);
+        if (res.ok && data.ok) {
+          setStatus('Message sent — I will get back to you soon.', 'success');
+          contactForm.reset();
+        } else {
+          const firstError = data.errors ? Object.values(data.errors)[0] : null;
+          setStatus(firstError || data.error || 'Something went wrong. Please try again.', 'error');
+        }
+      } catch (err) {
+        setStatus('Network error — please try again.', 'error');
+      } finally {
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = originalText;
+        }
+      }
     });
   }
 

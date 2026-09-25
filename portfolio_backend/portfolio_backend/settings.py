@@ -76,3 +76,30 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# --- Contact form / SMTP -------------------------------------------------
+# Gmail: EMAIL_HOST_USER = your Gmail address, EMAIL_HOST_PASSWORD = 16-char
+# App Password (https://myaccount.google.com/apppasswords), not your login
+# password. Values are read from portfolio_backend/.env — never commit them.
+try:
+    from dotenv import load_dotenv
+    load_dotenv(BASE_DIR / '.env')
+except ImportError:
+    pass
+
+EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
+EMAIL_PORT = int(os.environ.get('EMAIL_PORT', '587'))
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'true').strip().lower() in ('1', 'true', 'yes')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '').strip()
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '').strip()
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', '').strip() or (
+    EMAIL_HOST_USER or 'no-reply@localhost'
+)
+CONTACT_TO_EMAIL = os.environ.get('CONTACT_TO_EMAIL', '').strip() or DEFAULT_FROM_EMAIL
+
+if EMAIL_HOST_USER and EMAIL_HOST_PASSWORD:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+else:
+    # No credentials configured yet: print the message to the runserver
+    # console so the form still works locally instead of raising.
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
