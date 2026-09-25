@@ -1606,3 +1606,66 @@ input, textarea { font-family: inherit; border: none; outline: none; background:
   .reveal { opacity: 1; transform: none; }
   .mobile-menu__link { opacity: 1; transform: none; }
 }
+/* ========================================
+   MOBILE / TOUCH RESPONSIVENESS
+   ======================================== */
+
+@media (max-width: 1024px) {
+  /* WCAG 2.5.5 / iOS HIG: minimum 44px touch targets */
+  .nav__toggle {
+    width: 44px;
+    height: 44px;
+    padding: 8px 0;
+  }
+  .nav__mark,
+  .nav__logo {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .mobile-menu__link {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 12px 0;
+  }
+  .footer__social-link {
+    width: 44px;
+    height: 44px;
+  }
+  .work__filter-btn,
+  .founder-mode__btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact__link { min-height: 44px; }
+}
+
+@media (max-width: 640px) {
+  /* Stop iOS/Android from scaling text back up */
+  html { -webkit-text-size-adjust: 100%; }
+
+  /* iOS auto-zooms the viewport when a focused field is under 16px */
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  /* Lift the smallest labels above the ~9px "unreadable" range */
+  .tag { font-size: 0.66rem; }
+  .tag--small { font-size: 0.6rem; }
+  .section-num { font-size: 0.72rem; }
+  .about__margin-note { font-size: 0.7rem; }
+
+  /* Long emails/URLs must not push the layout sideways */
+  .contact__link-value,
+  .footer__tagline,
+  address {
+    overflow-wrap: anywhere;
+  }
+
+  .btn { min-height: 44px; }
+}

@@ -2825,3 +2825,66 @@ input, textarea {
     transform: none;
   }
 }
+
+/* ========================================
+   MOBILE / TOUCH RESPONSIVENESS
+   ======================================== */
+
+@media (max-width: 1024px) {
+  /* WCAG 2.5.5 / iOS HIG: minimum 44px touch targets */
+  .nav__toggle {
+    width: 44px;
+    height: 44px;
+    padding: 8px 0;
+  }
+  .nav__logo,
+  .nav__logo-text {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .mobile-menu__link {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 12px 0;
+  }
+  .footer__social-link {
+    width: 44px;
+    height: 44px;
+  }
+  .work__filter-btn {
+    min-height: 44px;
+    padding: 11px 20px;
+  }
+  .contact__link { min-height: 44px; }
+}
+
+@media (max-width: 640px) {
+  /* Stop iOS/Android from scaling text back up */
+  html { -webkit-text-size-adjust: 100%; }
+
+  /* iOS auto-zooms the viewport when a focused field is under 16px */
+  .contact__form input,
+  .contact__form textarea,
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  /* Lift the smallest labels above the ~9px "unreadable" range */
+  .tag { font-size: 0.68rem; }
+  .tag--small { font-size: 0.62rem; }
+  .stack__item-tag { font-size: 0.7rem; }
+  .building__card-date { font-size: 0.7rem; }
+
+  /* Long emails/URLs must not push the layout sideways */
+  .contact__link-value,
+  .footer__tagline,
+  address {
+    overflow-wrap: anywhere;
+  }
+
+  .btn { min-height: 44px; }
+}

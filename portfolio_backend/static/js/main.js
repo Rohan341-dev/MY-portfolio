@@ -240,6 +240,15 @@
       statusEl.classList.toggle('contact__form-status--error', type === 'error');
     };
 
+    // Feedback for the no-JS submit path (server redirects to ?contact=…)
+    const contactFlag = new URLSearchParams(window.location.search).get('contact');
+    if (contactFlag === 'sent') {
+      setStatus('Message sent — I will get back to you soon.', 'success');
+    } else if (contactFlag === 'error') {
+      setStatus('Could not send your message. Please try again.', 'error');
+    }
+    if (contactFlag) history.replaceState(null, '', window.location.pathname);
+
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (btn && btn.disabled) return;
